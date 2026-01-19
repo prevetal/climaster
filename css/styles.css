@@ -2835,7 +2835,6 @@ header .solutions_menu .items .icon
     height: 100%;
 
     z-index: 1;
-    transition: width .3s linear;
     pointer-events: none;
 
     background: var(--bg);
@@ -2883,7 +2882,6 @@ header .solutions_menu .items .icon
     width: 64px;
 
     content: '';
-    transition: opacity .2s linear;
 
     opacity: var(--show-before);
     border-radius: 50%;
@@ -2935,7 +2933,6 @@ header .solutions_menu .items .icon
     width: 64px;
 
     content: '';
-    transition: opacity .2s linear;
 
     opacity: var(--show-after);
     border-radius: 50%;
