@@ -25,6 +25,12 @@
     }
 
 
+    .swiper-button-next
+    {
+        margin-right: var(--inner_gap_b) !important;
+    }
+
+
 
     /*--------------
         All link

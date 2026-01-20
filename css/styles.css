@@ -3620,6 +3620,176 @@ header .solutions_menu .items .icon
 
 
 
+/*-----------
+    Cases
+-----------*/
+.cases .cont > .grid_row
+{
+    --gap_x: 38px;
+    --gap_y: 38px;
+}
+
+
+.cases .block_head
+{
+    --width_multiplier: 2;
+}
+
+
+.cases .swiper
+{
+    overflow: visible !important;
+}
+
+
+.cases .swiper-slide
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.cases .case
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--inner_gap_s);
+}
+
+
+.cases .case .images
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+
+    gap: 10px;
+}
+
+
+.cases .case .images .big
+{
+    position: relative;
+
+    border-radius: var(--border_radius_m);
+}
+
+
+.cases .case .images .image
+{
+    display: block;
+
+    transition: .3s linear;
+
+    border-radius: var(--border_radius_m);
+    background: var(--bg_grey);
+
+    aspect-ratio: 1 / .7212;
+}
+
+
+.cases .case .images .sticker
+{
+    position: absolute;
+    bottom: var(--cont_padding_half);
+    left: var(--inner_gap_m);
+
+    max-width: calc(100% + var(--inner_gap_m) * 2);
+    padding-block: var(--inner_gap_s);
+    padding-inline: var(--inner_gap_m);
+
+    font-size: var(--font_size_ss);
+    font-weight: 500;
+    line-height: 100%;
+
+    z-index: 3;
+    letter-spacing: -.28px;
+
+    border-radius: var(--border_radius_m);
+    background: var(--bg);
+}
+
+
+.cases .case .images .thumbs
+{
+    --items_per_line: 4;
+    --gap_x: var(--inner_gap_m);
+    --gap_y: var(--inner_gap_m);
+}
+
+
+.cases .case .images .thumbs .image
+{
+    border-radius: var(--border_radius_s);
+
+    aspect-ratio: 1 / .7203;
+}
+
+
+.cases .case .info
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    font-size: var(--font_size_ss);
+    line-height: 100%;
+
+    opacity: .5;
+
+    gap: var(--inner_gap_s);
+}
+
+
+.cases .case .name
+{
+    font-size: var(--font_size_title_ss);
+    font-weight: 600;
+    line-height: 100%;
+}
+
+
+.cases .case .link
+{
+    font-size: var(--font_size_ss);
+    line-height: 100%;
+
+    color: var(--blue_color);
+}
+
+
+.cases .case .link a
+{
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.cases .swiper-slide.active .case .images .image
+{
+    aspect-ratio: 1 / 1.1741;
+}
+
+
+.cases .swiper-slide.active .case .images .thumbs .image
+{
+    aspect-ratio: 1 / .7203;
+}
+
+
+.cases .swiper-pagination
+{
+    display: none;
+}
+
+
+
 /*------------------
     Technologies
 ------------------*/

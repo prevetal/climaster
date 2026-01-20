@@ -1,6 +1,22 @@
 @media print,
 (max-width: 1899px)
 {
+    /*-------------------
+        Global styles
+    -------------------*/
+    .swiper-button-prev
+    {
+        margin-right: 79px !important;
+    }
+
+
+    .swiper-button-next
+    {
+        margin-right: var(--inner_gap) !important;
+    }
+
+
+
     /*--------------
         All link
     --------------*/
@@ -610,6 +626,41 @@
     .free_consult .form
     {
         width: 360px;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .cont > .grid_row
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .cases .case .images
+    {
+        margin-bottom: var(--inner_gap_m);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .cases .case .images .thumbs
+    {
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .cases .case .images .sticker
+    {
+        bottom: var(--cont_padding_half);
+        left: var(--cont_padding_half);
+
+        max-width: calc(100% - var(--cont_padding));
     }
 
 

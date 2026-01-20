@@ -418,6 +418,35 @@
 
 
 
+    /*-----------
+        Cases
+    -----------*/
+    .cases .cont > .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .cases .block_head
+    {
+        --width_multiplier: 1;
+    }
+
+
+    .cases .swiper
+    {
+        width: 320px;
+    }
+
+
+    .cases .swiper-button-next,
+    .cases .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+
     /*------------------
         Technologies
     ------------------*/

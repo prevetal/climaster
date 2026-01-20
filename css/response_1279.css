@@ -16,6 +16,23 @@
     }
 
 
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        --swiper-navigation-size: 48px;
+    }
+
+    .swiper-button-prev
+    {
+        margin-right: 63px !important;
+    }
+
+    .swiper-button-next
+    {
+        margin-right: var(--inner_gap_m) !important;
+    }
+
+
 
     /*--------------
         All link
@@ -736,6 +753,17 @@
     .free_consult .form
     {
         width: 348px;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .cont > .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--inner_gap_m);
     }
 
 

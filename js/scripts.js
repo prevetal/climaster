@@ -65,6 +65,49 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
+	// Cases slider
+	let casesSlider = document.querySelector('.cases .swiper')
+
+	if (casesSlider) {
+		new Swiper('.cases .swiper', {
+			loop: true,
+			speed: 500,
+			loopAdditionalSlides: 2,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			slidesPerView: 1,
+			lazy: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 12
+				},
+				1024: {
+					spaceBetween: 16
+				},
+				1280: {
+					spaceBetween: 24
+				},
+				1900: {
+					spaceBetween: 38
+				}
+			},
+			on: {
+				init: swiper => {
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.swiper-slide')), 500)
+
+					swiper.slideTo(2, 0)
+					setTimeout(() => swiper.slideTo(0, 0), 50)
+				}
+			}
+		})
+	}
+
+
 	// Brands slider
 	const brandsSliders = [],
 		brands = document.querySelectorAll('.brands .swiper')
