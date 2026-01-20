@@ -31,23 +31,36 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
-	// Thumbs slider
-	let thumbsSlider = document.querySelector('.thumbs .swiper')
+	// Stores slider
+	let storesSlider = document.querySelector('.stores .swiper')
 
-	if (thumbsSlider) {
-		new Swiper('.thumbs .swiper', {
+	if (storesSlider) {
+		new Swiper('.stores .swiper', {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			spaceBetween: 26,
 			slidesPerView: 'auto',
 			lazy: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
-			}
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 12
+				},
+				1280: {
+					spaceBetween: 16
+				},
+				1440: {
+					spaceBetween: 20
+				},
+				1900: {
+					spaceBetween: 26
+				}
+			},
 		})
 	}
 

@@ -1,0 +1,847 @@
+@media print,
+(max-width: 1899px)
+{
+    /*--------------
+        All link
+    --------------*/
+    .all_link a
+    {
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_b) var(--inner_gap_s);
+
+        border-radius: var(--border_radius_b);
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .data.absolute
+    {
+        padding-block: var(--inner_gap) 0;
+
+        gap: var(--inner_gap_b);
+    }
+
+
+
+    header .bottom
+    {
+        padding-block: 4px;
+        padding-inline: var(--block_padding) 4px;
+
+        border-radius: 0 var(--border_radius) var(--border_radius);
+    }
+
+
+
+    header .location
+    {
+        width: auto;
+    }
+
+
+
+    header .contacts
+    {
+        min-width: 0;
+        margin-left: var(--inner_gap);
+    }
+
+
+
+    header .btns
+    {
+        margin-left: var(--inner_gap_b);
+    }
+
+
+    header .btns .btn
+    {
+        width: 200px;
+    }
+
+
+
+    header .services_menu
+    {
+        gap: var(--inner_gap);
+    }
+
+
+
+    header .solutions_menu
+    {
+        min-height: 60px;
+
+        border-radius: var(--border_radius_b);
+
+        gap: var(--inner_gap_b);
+    }
+
+
+    header .solutions_menu .items
+    {
+        gap: var(--inner_gap_b);
+    }
+
+
+    header .solutions_menu .items a
+    {
+        gap: var(--cont_padding_half);
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .agree
+    {
+        margin-top: var(--inner_gap);
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block > *
+    {
+        margin-bottom: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        margin-bottom: var(--inner_gap_b);
+    }
+
+
+    .first_section .cont
+    {
+        min-height: 748px;
+        padding-block: 262px 48px;
+    }
+
+
+
+    .first_section .title
+    {
+        margin-top: 0;
+    }
+
+
+
+    .first_section .btns
+    {
+        width: 360px;
+
+        gap: 20px;
+    }
+
+
+    .first_section .btns .btn
+    {
+        height: 72px;
+
+        border-radius: var(--border_radius_b);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    .first_section .pluses .sub_title
+    {
+        width: 380px;
+    }
+
+
+    .first_section .grid_row
+    {
+        gap: 68px;
+    }
+
+
+    .first_section .pluses .item
+    {
+        gap: var(--cont_padding_half);
+    }
+
+
+
+    /*------------
+        Stores
+    ------------*/
+    .stores
+    {
+        margin-bottom: var(--inner_gap_b);
+    }
+
+
+    .stores .swiper-button-next,
+    .stores .swiper-button-prev
+    {
+        width: 80px;
+    }
+
+
+    .stores .thumb
+    {
+        width: 120px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .about_info .head .block_head
+    {
+        width: 360px;
+    }
+
+
+    .about_info .head .free
+    {
+        width: 440px;
+        height: 200px;
+
+        border-radius: 0 48px 48px 48px;
+    }
+
+
+    .about_info .head .total_area
+    {
+        width: 480px;
+        height: 200px;
+        padding-inline: 48px;
+
+        border-radius: 48px 48px 48px 0;
+    }
+
+
+    .about_info .head .total_area .val
+    {
+        font-size: 72px;
+        line-height: calc(100% + 10px);
+    }
+
+
+
+    .about_info .row
+    {
+        margin-top: calc(var(--block_padding) * 2);
+    }
+
+
+
+    .about_info .row .data
+    {
+        width: calc(100% - 888px);
+        padding-block: 48px;
+        padding-inline: 48px;
+
+        border-radius: var(--border_radius_b) var(--border_radius_s) var(--border_radius_b) var(--border_radius_b);
+    }
+
+
+    .about_info .row .data .btn
+    {
+        margin-top: 60px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .about_info .row .image
+    {
+        width: 380px;
+    }
+
+
+    .about_info .row .info
+    {
+        width: 460px;
+        padding-block: 48px;
+        padding-inline: 48px;
+    }
+
+
+
+    /*------------------
+        Object types
+    ------------------*/
+    .object_types .block_head .title
+    {
+        width: 800px;
+    }
+
+
+    .object_types .block_head .desc
+    {
+        width: 600px;
+    }
+
+
+    .object_types .type .thumb .arrow
+    {
+        top: var(--cont_padding_half);
+        right: var(--cont_padding_half);
+
+        width: 60px;
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions .item,
+    .directions .item:nth-child(4)
+    {
+        min-height: 324px;
+        padding: var(--inner_gap_b);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .directions .item .thumb,
+    .directions .item:nth-child(4) .thumb
+    {
+        top: -40px;
+        right: 0;
+
+        width: 172px;
+    }
+
+
+    .directions .item .desc br
+    {
+        display: none;
+    }
+
+
+    .directions .item .arrow
+    {
+        right: 20px;
+        bottom: 20px;
+
+        width: 60px;
+    }
+
+
+
+    .directions .action_form .data
+    {
+        min-height: 324px;
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+    .directions .action_form .form .columns
+    {
+        width: calc(100% - 300px);
+    }
+
+
+    .directions .action_form .form .submit
+    {
+        width: 300px;
+    }
+
+
+
+    /*------------------
+        Microclimate
+    ------------------*/
+    .microclimate
+    {
+        padding-top: 0;
+    }
+
+
+    .microclimate .row
+    {
+        --info_width: 380px;
+    }
+
+
+
+    .microclimate .item
+    {
+        min-height: 240px;
+        padding: var(--inner_gap_b);
+    }
+
+
+    .microclimate .item.info
+    {
+        min-height: 600px;
+    }
+
+
+    .microclimate .item.info .btn
+    {
+        gap: var(--inner_gap_m);
+    }
+
+
+    .microclimate .item .plus
+    {
+        width: 80px;
+    }
+
+
+    .microclimate .item .plus .icon
+    {
+        width: 24px;
+    }
+
+
+
+    .microclimate > .bg
+    {
+        border-radius: var(--border_radius_b);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .block_head .title
+    {
+        width: 800px;
+    }
+
+
+    .steps .block_head .desc
+    {
+        width: 500px;
+    }
+
+
+
+    .steps .tabs .btn
+    {
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_s);
+
+        font-size: var(--font_size);
+
+        --number_size: 48px;
+    }
+
+
+    .steps .tabs .inner
+    {
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_s);
+    }
+
+
+    .steps .tab_content.active
+    {
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    .steps .data
+    {
+        width: 800px;
+        max-width: calc(100% - 420px - var(--cont_padding_double));
+    }
+
+
+    .steps .data .btn
+    {
+        gap: var(--inner_gap);
+    }
+
+
+
+    .steps .image
+    {
+        width: 420px;
+    }
+
+
+
+    /*----------
+        Goal
+    ----------*/
+    .goal .data
+    {
+        width: calc(100% - 568px);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .goal .block_head
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .goal .precision
+    {
+        width: 460px;
+        max-width: calc(100% - 424px);
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .goal .text_block
+    {
+        width: 400px;
+    }
+
+
+    .goal .info
+    {
+        width: 520px;
+        padding-block: var(--cont_padding_double);
+    }
+
+
+
+    /*-----------------
+        Action form
+    -----------------*/
+    .action_form .data
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: 80px;
+    }
+
+
+    .action_form .form .columns
+    {
+        width: calc(100% - 340px);
+    }
+
+
+    .action_form .form .submit
+    {
+        width: 340px;
+    }
+
+
+
+    /*-----------------
+        Partnership
+    -----------------*/
+    .partnership .block_head .title
+    {
+        width: calc(100% - 860px);
+    }
+
+
+    .partnership .block_head .desc
+    {
+        width: 780px;
+    }
+
+
+    .partnership .sub_title
+    {
+        margin-bottom: var(--inner_gap);
+    }
+
+
+    .partnership .item .name
+    {
+        font-size: var(--font_size_title_ss);
+    }
+
+
+    .partnership .item .image
+    {
+        width: 380px;
+    }
+
+
+    .partnership .item .result
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*------------------
+        Free consult
+    ------------------*/
+    .free_consult .image
+    {
+        width: 400px;
+        min-height: 260px;
+    }
+
+
+    .free_consult .info
+    {
+        width: calc(100% - 856px);
+
+        gap: var(--block_padding);
+    }
+
+
+    .free_consult .form
+    {
+        width: 360px;
+    }
+
+
+
+    /*------------------
+        Technologies
+    ------------------*/
+    .technologies .item
+    {
+        min-height: 240px;
+        padding-block: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_b);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .technologies .we
+    {
+        padding-block: 120px var(--inner_gap_b);
+    }
+
+
+    .technologies .we .image
+    {
+        top: -148px;
+
+        width: 300px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats .data
+    {
+        padding-block: 60px;
+        padding-inline: 60px;
+    }
+
+
+    .stats .block_head
+    {
+        padding-bottom: 0;
+    }
+
+
+    .stats .item .val
+    {
+        line-height: calc(100% + 8px);
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .data
+    {
+        padding-block: var(--cont_padding_double) 0;
+        padding-inline: 60px;
+    }
+
+
+    .reviews .data:before
+    {
+        height: calc(100% - 200px - var(--inner_gap_b));
+    }
+
+
+    .reviews .grid_row
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .reviews .review .thumb
+    {
+        margin-bottom: var(--inner_gap_s);
+    }
+
+
+    .reviews .all_link
+    {
+        padding-inline: 60px;
+    }
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands .swiper-slide
+    {
+        width: 260px;
+    }
+
+
+    .brands .item .logo
+    {
+        height: 120px;
+    }
+
+
+
+    /*----------------
+        Warranties
+    ----------------*/
+    .warranties .data
+    {
+        padding-block: 60px;
+        padding-inline: 60px;
+    }
+
+
+    .warranties .grid_row
+    {
+        --gap_x: var(-inner_gap_m);
+        --gap_y: var(-inner_gap_m);
+    }
+
+
+    .warranties .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .warranties .item .icon
+    {
+        width: 60px;
+        min-width: 60px;
+    }
+
+
+    .warranties .item .icon svg
+    {
+        width: 24px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article
+    {
+        gap: var(--inner_gap_m);
+    }
+
+
+    .articles .article .name
+    {
+        min-height: 2lh;
+    }
+
+
+    .articles .article .desc
+    {
+        min-height: 3lh;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .data
+    {
+        padding-block: var(--cont_padding_double) 0;
+        padding-inline: 60px;
+    }
+
+
+    .certs .grid_row
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+
+    .certs .all_link
+    {
+        padding-inline: 60px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .data
+    {
+        padding-block: var(--cont_padding_double) 60px;
+    }
+
+
+    footer .data .cont
+    {
+        gap: 40px;
+    }
+
+
+
+    footer .bottom
+    {
+        padding-block: 20px;
+    }
+
+
+
+    footer .info
+    {
+        width: 400px;
+    }
+
+
+    footer .info .row + .row
+    {
+        margin-top: 60px;
+    }
+
+
+
+    footer .menu
+    {
+        width: 196px;
+    }
+}
