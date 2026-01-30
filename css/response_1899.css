@@ -114,6 +114,15 @@
     }
 
 
+    header .solutions_menu .sub
+    {
+        width: 400px;
+        padding-inline: var(--block_padding);
+
+        gap: var(--inner_gap);
+    }
+
+
 
     /*------------------
         Form elements

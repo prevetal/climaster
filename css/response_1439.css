@@ -131,6 +131,15 @@
     }
 
 
+    header .solutions_menu .sub
+    {
+        width: 320px;
+        padding: var(--inner_gap);
+
+        gap: var(--inner_gap_s);
+    }
+
+
 
     /*---------------
         Page head
