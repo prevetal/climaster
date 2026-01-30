@@ -909,6 +909,8 @@ header .bottom .bg
 
 header .services_menu
 {
+    position: relative;
+
     display: flex;
     align-content: center;
     align-items: center;
@@ -917,6 +919,8 @@ header .services_menu
 
     font-size: var(--font_size_b);
     font-weight: 700;
+
+    z-index: 5;
 
     gap: var(--cont_padding_half);
 }
@@ -934,7 +938,7 @@ header .services_menu .sep
 }
 
 
-header .services_menu a
+header .services_menu > * > a
 {
     position: relative;
 
@@ -951,9 +955,219 @@ header .services_menu a
 }
 
 
-header .services_menu a:hover
+header .services_menu > * > a.sub_link:before
+{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 30px;
+    height: 7px;
+    margin-inline: auto;
+
+    content: '';
+    transition: .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    background: url(../images/bg_menu_sub_link_tail.png) 50% 0/100% 100% no-repeat;
+}
+
+
+header .services_menu > * > a.sub_link:after
+{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 30px;
+    height: 7px;
+    margin-inline: auto;
+    margin-top: var(--inner_gap);
+
+    content: '';
+    transition: .2s linear;
+    transform: translateY(-100%);
+    pointer-events: none;
+
+    opacity: 0;
+    background: url(../images/bg_menu_sub_link_tail2.png) 50% 0/100% 100% no-repeat;
+}
+
+
+header .services_menu > *:hover > a
 {
     background: var(--primary_color_strong);
+}
+
+
+header .services_menu > *:hover > a.sub_link:before,
+header .services_menu > *:hover > a.sub_link:after
+{
+    opacity: 1;
+}
+
+
+header .services_menu .sub
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: flex;
+    visibility: hidden;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    margin-top: var(--inner_gap);
+    padding-block: var(--block_padding);
+    padding-inline: var(--cont_padding_double);
+
+    transition: .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    border-radius: var(--border_radius_b);
+    background: var(--bg);
+    box-shadow: 0 8px 22px -6px rgba(27, 58, 132, .12), 0 14px 64px -4px rgba(27, 58, 132, .12);
+
+    gap: 80px;
+}
+
+
+header .services_menu .sub.right
+{
+    right: 0;
+    left: auto;
+}
+
+
+header .services_menu .sub:before
+{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: var(--inner_gap);
+
+    content: '';
+}
+
+
+@media (hover: hover) and (pointer: fine)
+{
+    header .services_menu > *:hover .sub
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+}
+
+
+header .services_menu .sub.show
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+header .services_menu .sub > *
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 350px;
+    max-width: 100%;
+
+    gap: 80px;
+}
+
+
+header .services_menu .sub .item
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--inner_gap_b);
+}
+
+
+header .services_menu .sub .main
+{
+    font-size: var(--font_size_b);
+    font-weight: 700;
+    line-height: 1;
+
+    color: var(--black_color);
+}
+
+
+header .services_menu .sub .main a
+{
+    display: inline-block;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+header .services_menu .sub .main a:hover
+{
+    color: var(--primary_color);
+}
+
+
+header .services_menu .sub .items
+{
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 500;
+    line-height: 120%;
+
+    color: var(--primary_color);
+
+    gap: var(--inner_gap);
+}
+
+
+header .services_menu .sub .items a
+{
+    display: inline-block;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+header .services_menu .sub .items a:hover
+{
+    text-decoration: underline;
+
+    text-decoration-thickness: 1px;
 }
 
 
@@ -1146,7 +1360,20 @@ header .solutions_menu .sub:before
 }
 
 
-header .solutions_menu .items > *:hover .sub
+@media (hover: hover) and (pointer: fine)
+{
+    header .solutions_menu .items > *:hover .sub
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+}
+
+
+header .solutions_menu .sub.show
 {
     visibility: visible;
 

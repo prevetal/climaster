@@ -92,6 +92,28 @@
     }
 
 
+    header .services_menu .sub
+    {
+        padding-inline: var(--block_padding);
+
+        gap: 60px;
+    }
+
+
+    header .services_menu .sub > *
+    {
+        width: 320px;
+
+        gap: 60px;
+    }
+
+
+    header .services_menu .sub .items
+    {
+        font-size: var(--font_size_m);
+    }
+
+
 
     header .solutions_menu
     {

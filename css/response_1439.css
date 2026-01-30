@@ -110,9 +110,23 @@
 
 
 
-    header .services_menu a
+    header .services_menu > * > a
     {
         padding-inline: var(--inner_gap_m);
+    }
+
+
+    header .services_menu .sub
+    {
+        gap: var(--cont_padding_double);
+    }
+
+
+    header .services_menu .sub > *
+    {
+        width: 300px;
+
+        gap: var(--cont_padding_double);
     }
 
 
@@ -125,7 +139,7 @@
     }
 
 
-    header .solutions_menu .items a
+    header .solutions_menu .items > a
     {
         padding-inline: var(--inner_gap_m);
     }

@@ -322,10 +322,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	if (is_touch_device()) {
-		const subMenus = document.querySelectorAll('header .solutions_menu .sub')
+		const servicesSubMenus = document.querySelectorAll('header .services_menu .sub'),
+			solutionsSubMenus = document.querySelectorAll('header .solutions_menu .sub')
 
 		// Submenu on the touch screen
-		$('header .solutions_menu .items a.sub_link').addClass('touch_link')
+		$('header .services_menu a.sub_link').click(function (e) {
+			const dropdown = $(this).next()
+
+			if (dropdown.css('visibility') === 'hidden') {
+				e.preventDefault()
+
+				servicesSubMenus.forEach(el => el.classList.remove('show'))
+				dropdown.addClass('show')
+
+				BODY.style = 'cursor: pointer;'
+			}
+		})
 
 		$('header .solutions_menu .items a.sub_link').click(function (e) {
 			const dropdown = $(this).next()
@@ -333,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (dropdown.css('visibility') === 'hidden') {
 				e.preventDefault()
 
-				subMenus.forEach(el => el.classList.remove('show'))
+				solutionsSubMenus.forEach(el => el.classList.remove('show'))
 				dropdown.addClass('show')
 
 				BODY.style = 'cursor: pointer;'
@@ -342,8 +354,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		// Close the submenu when clicking outside it
 		document.addEventListener('click', e => {
+			if ($(e.target).closest('.services_menu').length === 0) {
+				servicesSubMenus.forEach(el => el.classList.remove('show'))
+
+				BODY.style = 'cursor: default;'
+			}
+
 			if ($(e.target).closest('.solutions_menu').length === 0) {
-				subMenus.forEach(el => el.classList.remove('show'))
+				solutionsSubMenus.forEach(el => el.classList.remove('show'))
 
 				BODY.style = 'cursor: default;'
 			}

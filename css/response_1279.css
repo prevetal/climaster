@@ -105,9 +105,29 @@
     }
 
 
-    header .services_menu a
+    header .services_menu > * > a
     {
         padding-inline: 20px;
+    }
+
+
+    header .services_menu > * > a.sub_link:after
+    {
+        margin-top: calc(var(--inner_gap) + 4px);
+    }
+
+
+    header .services_menu .sub
+    {
+        gap: var(--block_padding);
+    }
+
+
+    header .services_menu .sub > *
+    {
+        width: 280px;
+
+        gap: var(--block_padding);
     }
 
 
