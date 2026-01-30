@@ -271,11 +271,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		$('.mob_header .mob_menu_btn').toggleClass('active')
 		$('body').toggleClass('lock')
-		$('header').toggleClass('show')
+		$('.mob_menu').toggleClass('show')
+	})
 
-		$('.mob_header .mob_menu_btn').hasClass('active')
-			? $('.overlay').fadeIn(300)
-			: $('.overlay').fadeOut(200)
+
+	$('.mob_menu .services_menu > * > a.sub_link, .mob_menu .solutions_menu .items > * > a.sub_link').click(function(e) {
+		e.preventDefault()
+
+		$(this).next('.sub').addClass('show')
+	})
+
+
+	$('.mob_menu .services_menu .back_btn, .mob_menu .solutions_menu .back_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).closest('.sub').removeClass('show')
 	})
 
 
