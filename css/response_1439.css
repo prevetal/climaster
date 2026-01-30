@@ -10,12 +10,13 @@
         --font_size: 16px;
         --font_size_m: 14px;
         --font_size_s: 14px;
-        --font_size_ss: 12px;
+        --font_size_xs: 12px;
         --font_size_title_b: 48px;
         --font_size_title: 40px;
         --font_size_title_s: 32px;
-        --font_size_title_ss: 24px;
+        --font_size_title_xs: 24px;
         --outside_gap: 100px;
+        --outside_gap_m: 80px;
         --inner_gap_b: 24px;
         --inner_gap: 20px;
         --inner_gap_m: 16px;
@@ -48,6 +49,16 @@
 
 
 
+    /*---------------------
+        Grid row bottom
+    ---------------------*/
+    .grid_row_bottom
+    {
+        margin-top: var(--inner_gap_b);
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -59,7 +70,7 @@
 
     header .bottom
     {
-        padding-inline: var(--cont_padding) 4px;
+        padding-inline: var(--inner_gap_s) 4px;
     }
 
 
@@ -99,9 +110,62 @@
 
 
 
+    header .services_menu
+    {
+        gap: 0;
+    }
+
+
+    header .services_menu a
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+
     header .solutions_menu
     {
         min-height: 52px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    header .solutions_menu .items
+    {
+        gap: 0;
+    }
+
+
+    header .solutions_menu .items a
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        margin-bottom: var(--outside_gap_m);
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .sub_title
+    {
+        margin-top: var(--inner_gap_m);
+    }
+
+
+    .block_head.row .desc.big_w
+    {
+        width: 608px;
     }
 
 
@@ -112,6 +176,24 @@
     .form
     {
         --form_input_height: 60px;
+    }
+
+
+    .form .file label .icon
+    {
+        width: 32px;
+    }
+
+
+    .form .file label span
+    {
+        max-width: calc(100% - 40px);
+    }
+
+
+    .form .submit .file
+    {
+        max-width: calc(100% - 292px);
     }
 
 
@@ -466,7 +548,8 @@
 
 
 
-    .steps .image
+    .steps .image,
+    .steps .image.small_w
     {
         width: 360px;
     }
@@ -624,13 +707,13 @@
     /*-------------
         Reviews
     -------------*/
-    .reviews .data
+    .reviews .cont > .data
     {
         padding-inline: var(--cont_padding_double);
     }
 
 
-    .reviews .data:before
+    .reviews .cont > .data:before
     {
         height: calc(100% - 180px - var(--inner_gap_b));
     }
@@ -643,9 +726,37 @@
 
 
 
+    /*-----------------
+        Reviews page
+    -----------------*/
+    .reviews_page .grid_row > *.stats
+    {
+        padding-block: 48px;
+    }
+
+
+    .reviews_page .stats .item .val
+    {
+        font-size: 34px;
+    }
+
+
+
     /*------------
         Brands
     ------------*/
+    .brands .tabs .btn
+    {
+        height: 48px;
+    }
+
+
+    .brands .grid_row
+    {
+        --gap_x: var(--inner_gap);
+    }
+
+
     .brands .swiper-slide
     {
         width: 220px;
@@ -689,6 +800,573 @@
     .certs .all_link
     {
         padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page
+    {
+        margin-bottom: var(--outside_gap_m);
+    }
+
+
+
+    .error_page .exp
+    {
+        width: 256px;
+        height: 300px;
+    }
+
+
+
+    .error_page .data
+    {
+        width: calc(100% - 608px);
+    }
+
+
+    .error_page .data .image
+    {
+        height: 300px;
+
+        border-radius: 50px;
+    }
+
+
+    .error_page .data .image img
+    {
+        top: -24px;
+
+        width: 519px;
+        height: 380px;
+    }
+
+
+    .error_page .data .title
+    {
+        margin-top: var(--inner_gap_b);
+    }
+
+
+
+    .error_page .links
+    {
+        width: 256px;
+        height: 300px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info.block.bg
+    {
+        margin-bottom: 68px;
+        padding-block: 40px 52px;
+    }
+
+
+    .contacts_info .info
+    {
+        width: calc(50% - var(--inner_gap));
+    }
+
+
+    .contacts_info .map
+    {
+        width: calc(50% - var(--inner_gap));
+        height: 360px;
+    }
+
+
+
+    /*-------------------
+        Contacts data
+    -------------------*/
+    .contacts_data .requisites
+    {
+        width: calc(50% - var(--inner_gap));
+    }
+
+
+    .contacts_data .feedback
+    {
+        width: calc(50% - var(--inner_gap));
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .data
+    {
+        padding-block: 48px;
+        padding-inline: 48px;
+    }
+
+
+    .feedback .form .submit_btn
+    {
+        width: 268px;
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .item
+    {
+        margin-top: 68px;
+        padding-block: 112px var(--inner_gap_b);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+    .guarantees .item .thumb
+    {
+        top: -60px;
+
+        width: 180px;
+    }
+
+
+
+    /*----------------------
+        Warranty install
+    ----------------------*/
+    .warranty_install .block_head
+    {
+        width: 440px;
+    }
+
+
+    .warranty_install .items
+    {
+        width: calc(100% - 488px);
+    }
+
+
+
+    /*-----------------------
+        For save warranty
+    -----------------------*/
+    .for_save_warranty .data
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+
+        border-radius: var(--border_radius_b);
+    }
+
+
+    .for_save_warranty .exp
+    {
+        margin-top: var(--inner_gap);
+        margin-bottom: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        Save warranty
+    -------------------*/
+    .save_warranty .block_head
+    {
+        width: 340px;
+    }
+
+
+    .save_warranty .grid_row
+    {
+        width: calc(100% - 356px - var(--inner_gap_m));
+        max-width: calc(100% + var(--inner_gap_m));
+    }
+
+
+    .save_warranty .item
+    {
+        min-height: 240px;
+    }
+
+
+
+    /*-------------------------
+        Payment individuals
+    -------------------------*/
+    .payment_individuals .cont
+    {
+        justify-content: flex-start;
+    }
+
+
+    .payment_individuals .thumb
+    {
+        width: 180px;
+    }
+
+
+    .payment_individuals .block_head
+    {
+        align-self: center;
+
+        width: 600px;
+    }
+
+
+    .payment_individuals .data
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------------
+        Payment legals
+    --------------------*/
+    .payment_legals .cont
+    {
+        justify-content: flex-start;
+    }
+
+
+    .payment_legals .thumb
+    {
+        width: 180px;
+    }
+
+
+    .payment_legals .block_head
+    {
+        align-self: center;
+
+        width: 600px;
+    }
+
+
+    .payment_legals .data
+    {
+        width: 100%;
+    }
+
+
+
+    /*------------------
+        Measurements
+    ------------------*/
+    .measurements .data
+    {
+        width: calc(100% - 808px);
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+    .measurements .btns .btn .arrow
+    {
+        width: 52px;
+    }
+
+
+    .measurements .image
+    {
+        width: 360px;
+    }
+
+
+    .measurements .info
+    {
+        width: 400px;
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+    .measurements .info ol li
+    {
+        min-height: 60px;
+        padding-left: 80px;
+    }
+
+
+    .measurements .info ol li:before
+    {
+        width: 60px;
+
+        font-size: 22px;
+    }
+
+
+
+    /*--------------
+        Delivery
+    --------------*/
+    .delivery .data
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+    .delivery .item
+    {
+        width: 300px;
+    }
+
+
+    .delivery .item.blue
+    {
+        width: calc(100% - 660px);
+        padding-inline: 200px var(--inner_gap);
+    }
+
+
+    .delivery .item .desc
+    {
+        min-height: 4lh;
+    }
+
+
+    .delivery .item .thumb
+    {
+        left: -48px;
+
+        width: 240px;
+    }
+
+
+
+    /*--------------------
+        Letters thanks
+    --------------------*/
+    .letters_thanks .block_head
+    {
+        width: 440px;
+    }
+
+
+    .letters_thanks .data
+    {
+        width: calc(100% - 488px);
+    }
+
+
+
+    /*----------------
+        Add review
+    ----------------*/
+    .add_review .data
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*----------------------
+        Partnership head
+    ----------------------*/
+    .partnership_head .data
+    {
+        min-height: 550px;
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+    .partnership_head .requests .block_head
+    {
+        width: 280px;
+    }
+
+
+    .partnership_head .requests .grid_row
+    {
+        width: calc(100% - 280px - var(--inner_gap_b));
+    }
+
+
+    .partnership_head .requests .item .icon svg
+    {
+        width: 24px;
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .item
+    {
+        margin-top: 68px;
+        padding-block: 116px var(--cont_padding_double);
+    }
+
+
+    .why_we .item .thumb
+    {
+        top: -68px;
+    }
+
+
+
+    /*----------------
+        Cases head
+    ----------------*/
+    .cases_head .filter
+    {
+        width: 608px;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .case .desc,
+    .cases .case .details
+    {
+        margin-top: var(--inner_gap_m);
+    }
+
+
+    .cases .case .details a
+    {
+        padding-inline: var(--inner_gap_b) var(--inner_gap_s);
+    }
+
+
+    .cases .case .details .arrow
+    {
+        width: 52px;
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head .col
+    {
+        width: calc(100% - 440px - var(--inner_gap));
+    }
+
+
+    .about_head .info
+    {
+        width: 440px;
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    /*-----------
+        Trust
+    -----------*/
+    .trust .item
+    {
+        min-height: 260px;
+        padding-inline: var(--block_padding);
+    }
+
+
+    .trust .item .val
+    {
+        font-size: 72px;
+        line-height: calc(100% + 8px);
+    }
+
+
+
+    /*-------------------
+        Why choose us
+    -------------------*/
+    .why_choose_us .item:nth-child(1),
+    .why_choose_us .item:nth-child(5)
+    {
+        height: 260px;
+    }
+
+
+    .why_choose_us .item:nth-child(2),
+    .why_choose_us .item:nth-child(4)
+    {
+        height: 280px;
+    }
+
+
+    .why_choose_us .item:nth-child(3)
+    {
+        height: 300px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .project_title
+    {
+        width: 760px;
+    }
+
+
+
+    .project_info .features
+    {
+        right: calc(var(--cont_padding) + var(--inner_gap));
+
+        width: 400px;
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .project_info .features .item
+    {
+        gap: 4px;
+    }
+
+
+    .project_info .features .val
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    .project_info .task .info
+    {
+        width: 600px;
+    }
+
+
+
+    .project_info .solution .col,
+    .project_info .difficulties .col,
+    .project_info .results .col
+    {
+        width: 300px;
+    }
+
+
+    .project_info .solution .data,
+    .project_info .difficulties .data,
+    .project_info .results .data
+    {
+        width: calc(100% - 348px);
+    }
+
+
+
+    .project_info .back_link a
+    {
+        width: 320px;
     }
 
 

@@ -6,12 +6,46 @@
     :root
     {
         --cont_padding: 20px;
-        --font_size_title_b: 32px;
-        --font_size_title: 28px;
-        --font_size_title_s: 24px;
-        --font_size_title_ss: 20px;
+        --font_size_title_b: 33px;
+        --font_size_title: 25px;
+        --font_size_title_s: 22px;
+        --font_size_title_xs: 19px;
         --inner_gap_b: 20px;
-        --outside_gap: 68px;
+        --outside_gap: 60px;
+        --outside_gap_m: 48px;
+        --border_radius_b: 32px;
+        --border_radius: 24px;
+        --border_radius_m: 20px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+
+
+    /*---------------------
+        Grid row bottom
+    ---------------------*/
+    .grid_row_bottom
+    {
+        margin-top: var(--block_head_offset);
+    }
+
+
+    .grid_row_bottom .limit
+    {
+        justify-content: center;
+
+        width: 100%;
     }
 
 
@@ -70,6 +104,33 @@
     .mob_header
     {
         display: block;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .breadcrumbs
+    {
+        font-size: var(--font_size_xs);
+        line-height: 1;
+    }
+
+
+    .breadcrumbs .sep
+    {
+        width: 16px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head.row .title
+    {
+        max-width: 100%;
     }
 
 
@@ -384,6 +445,582 @@
         --items_per_line: 1;
         --gap_x: var(--inner_gap_s);
         --gap_y: var(--inner_gap_s);
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .grid_row,
+    .certs .grid_row.big_offsets
+    {
+        --items_per_line: 2;
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page .data .image
+    {
+        height: 180px;
+    }
+
+
+    .error_page .data .image img
+    {
+        top: -20px;
+
+        width: auto;
+        height: 224px;
+    }
+
+
+    .error_page .data .title
+    {
+        margin-top: var(--block_padding);
+    }
+
+
+    .error_page .data .title,
+    .error_page .data .desc
+    {
+        width: 100%;
+        margin-left: 0;
+
+        text-align: center;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .info .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*----------------
+        Requisites
+    ----------------*/
+    .requisites .sub_title
+    {
+        margin-block: var(--inner_gap);
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .data
+    {
+        padding-inline: var(--inner_gap_b);
+        padding-bottom: var(--inner_gap_b);
+    }
+
+
+
+    /*----------------------
+        Warranty install
+    ----------------------*/
+    .warranty_install .items > *
+    {
+        padding: var(--inner_gap_m);
+    }
+
+
+
+    /*-------------------
+        Save warranty
+    -------------------*/
+    .save_warranty .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*-------------------------
+        Payment individuals
+    -------------------------*/
+    .payment_individuals .thumb
+    {
+        width: 140px;
+    }
+
+
+    .payment_individuals .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--inner_gap);
+    }
+
+
+    .payment_individuals .methods .grid_row
+    {
+        --gap_y: var(--block_padding);
+        --items_per_line: 1;
+    }
+
+
+    .payment_individuals .methods .item
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .payment_individuals .methods .icon
+    {
+        width: 60px;
+        margin-bottom: 0;
+    }
+
+
+    .payment_individuals .methods .icon svg
+    {
+        width: 24px;
+    }
+
+
+    .payment_individuals .methods .name
+    {
+        align-self: center;
+
+        width: calc(100% - 76px);
+    }
+
+
+    .payment_individuals .methods .desc
+    {
+        width: 100%;
+    }
+
+
+
+    .payment_individuals .prepayment > *:not(.icon)
+    {
+        width: 100%;
+    }
+
+
+    .payment_individuals .prepayment .icon
+    {
+        display: none;
+    }
+
+
+
+    /*--------------------
+        Payment legals
+    --------------------*/
+    .payment_legals .thumb
+    {
+        width: 140px;
+    }
+
+
+    .payment_legals .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--inner_gap);
+    }
+
+
+    .payment_legals .items > *
+    {
+        padding: var(--inner_gap_m);
+    }
+
+
+
+    /*------------------
+        Measurements
+    ------------------*/
+    .measurements .data
+    {
+        padding-inline: var(--inner_gap_b);
+    }
+
+
+    .measurements .btns
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+    .measurements .image
+    {
+        width: 100%;
+    }
+
+
+    .measurements .info
+    {
+        width: 100%;
+    }
+
+
+    .measurements .info ol li
+    {
+        min-height: 48px;
+        padding-left: 64px;
+    }
+
+
+    .measurements .info ol li:before
+    {
+        width: 48px;
+
+        font-size: 19px;
+    }
+
+
+
+    /*--------------
+        Delivery
+    --------------*/
+    .delivery .data
+    {
+        padding-inline: var(--inner_gap_b);
+        padding-bottom: var(--inner_gap_b);
+    }
+
+
+    .delivery .item
+    {
+        width: 100%;
+    }
+
+
+    .delivery .item.blue
+    {
+        min-height: 0;
+        padding-block: 132px var(--inner_gap_b);
+        padding-inline: var(--inner_gap_b);
+    }
+
+
+    .delivery .item .desc
+    {
+        min-height: 4lh;
+    }
+
+
+    .delivery .item .thumb
+    {
+        top: var(--block_padding);
+        right: 0;
+        left: 0;
+
+        width: 240px;
+        margin-inline: auto;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .grid_row
+    {
+        --items_per_line: 2;
+    }
+
+
+
+    /*-----------------
+        Reviews page
+    -----------------*/
+    .reviews_page .grid_row > *.stats
+    {
+        padding-block: var(--inner_gap_m);
+
+        --width_multiplier: 2;
+    }
+
+
+    .reviews_page .stats .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .reviews_page .stats .item .val
+    {
+        font-size: 22px;
+    }
+
+
+
+    /*--------------------
+        Letters thanks
+    --------------------*/
+    .letters_thanks .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_b);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .letters_thanks .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .letters_thanks .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .letters_thanks .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*---------------------
+        Private reviews
+    ---------------------*/
+    .private_reviews .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .private_reviews .review
+    {
+        padding-block: var(--inner_gap_b);
+    }
+
+
+
+    /*----------------
+        Add review
+    ----------------*/
+    .add_review .data
+    {
+        padding-inline: var(--inner_gap_b);
+    }
+
+
+
+    /*----------------------
+        Partnership head
+    ----------------------*/
+    .partnership_head .data
+    {
+        padding-inline: var(--inner_gap_b);
+    }
+
+
+    .partnership_head .requests .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .partnership_head .requests .item .icon
+    {
+        width: 52px;
+    }
+
+
+    .partnership_head .requests .item .icon svg
+    {
+        width: 24px;
+    }
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands .tabs
+    {
+        display: grid;
+        overflow: auto;
+        justify-content: flex-start;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0 var(--inner_gap_m);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .brands .tabs::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .brands .tabs::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .brands .tabs .btn
+    {
+        scroll-snap-align: start;
+    }
+
+
+    .brands .grid_row
+    {
+        --items_per_line: 2;
+    }
+
+
+    .brands .grid_row > *.desc
+    {
+        --width_multiplier: 2px;
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .item
+    {
+        padding-block: 100px var(--inner_gap_b);
+    }
+
+
+    .why_we .item .thumb
+    {
+        width: 180px;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases_page .cont > .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head .info
+    {
+        padding: var(--inner_gap);
+    }
+
+
+
+    /*-----------
+        Trust
+    -----------*/
+    .trust .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*--------------
+        For whom
+    --------------*/
+    .for_whom .item
+    {
+        padding-top: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        Photo gallery
+    -------------------*/
+    .photo_gallery .swiper-slide
+    {
+        width: 160px;
+    }
+
+
+    .photo_gallery .swiper-button-next,
+    .photo_gallery .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info:before
+    {
+        height: calc(100% - 240px);
+    }
+
+
+    .project_info .solution .grid_row,
+    .project_info .difficulties .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .project_info .solution .item .name
+    {
+        min-height: 0;
     }
 
 

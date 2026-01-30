@@ -45,8 +45,14 @@
     header .bottom
     {
         padding-block: 4px;
-        padding-inline: var(--block_padding) 4px;
+        padding-inline: var(--inner_gap_m) 4px;
 
+        border-radius: 0 100px 100px;
+    }
+
+
+    header .bottom .bg
+    {
         border-radius: 0 var(--border_radius) var(--border_radius);
     }
 
@@ -82,7 +88,7 @@
 
     header .services_menu
     {
-        gap: var(--inner_gap);
+        gap: var(--inner_gap_s);
     }
 
 
@@ -90,16 +96,15 @@
     header .solutions_menu
     {
         min-height: 60px;
+        padding-inline: var(--inner_gap_b) var(--inner_gap_s);
 
         border-radius: var(--border_radius_b);
-
-        gap: var(--inner_gap_b);
     }
 
 
     header .solutions_menu .items
     {
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_s);
     }
 
 
@@ -479,6 +484,14 @@
 
 
 
+    .steps .tab_content.big_pad.active
+    {
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+
     .steps .data
     {
         width: 800px;
@@ -496,6 +509,12 @@
     .steps .image
     {
         width: 420px;
+    }
+
+
+    .steps .image.small_w
+    {
+        width: 380px;
     }
 
 
@@ -588,7 +607,7 @@
 
     .partnership .item .name
     {
-        font-size: var(--font_size_title_ss);
+        font-size: var(--font_size_title_xs);
     }
 
 
@@ -640,6 +659,13 @@
     }
 
 
+    .cases_page .cont > .grid_row
+    {
+        --gap_x: var(--inner_gap_b);
+        --gap_y: var(--inner_gap_b);
+    }
+
+
     .cases .case .images
     {
         margin-bottom: var(--inner_gap_m);
@@ -655,12 +681,14 @@
     }
 
 
+    .cases .case .images .features,
     .cases .case .images .sticker
     {
         bottom: var(--cont_padding_half);
         left: var(--cont_padding_half);
 
         max-width: calc(100% - var(--cont_padding));
+        padding-inline: var(--inner_gap_s);
     }
 
 
@@ -719,14 +747,14 @@
     /*-------------
         Reviews
     -------------*/
-    .reviews .data
+    .reviews .cont > .data
     {
         padding-block: var(--cont_padding_double) 0;
         padding-inline: 60px;
     }
 
 
-    .reviews .data:before
+    .reviews .cont > .data:before
     {
         height: calc(100% - 200px - var(--inner_gap_b));
     }
@@ -752,12 +780,47 @@
 
 
 
+    /*-----------------
+        Reviews page
+    -----------------*/
+    .reviews_page
+    {
+        padding-top: 40px;
+    }
+
+
+    .reviews_page .grid_row > *.stats
+    {
+        padding-block: 60px;
+    }
+
+
+    .reviews_page.stats .item .val
+    {
+        font-size: 40px;
+    }
+
+
+
     /*------------
         Brands
     ------------*/
+    .brands .tabs .btn
+    {
+        height: 52px;
+    }
+
+
     .brands .swiper-slide
     {
         width: 260px;
+    }
+
+
+    .brands .grid_row
+    {
+        --gap_x: var(--block_padding);
+        --gap_y: var(--inner_gap_m);
     }
 
 
@@ -847,10 +910,517 @@
     }
 
 
+    .certs .grid_row.big_offsets
+    {
+        --gap_x: var(--block_padding);
+        --gap_y: var(--block_padding);
+    }
+
+
 
     .certs .all_link
     {
         padding-inline: 60px;
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page .data
+    {
+        width: calc(100% - 692px);
+    }
+
+
+    .error_page .data .image
+    {
+        border-radius: 60px;
+    }
+
+
+    .error_page .data .image img
+    {
+        top: -28px;
+
+        width: 574px;
+        height: 420px;
+    }
+
+
+    .error_page .data .title,
+    .error_page .data .desc
+    {
+        width: 492px;
+        margin-left: 8%;
+    }
+
+
+
+    .error_page .links
+    {
+        width: 286px;
+    }
+
+
+
+    /*----------------------------
+        Payment departure head
+    ----------------------------*/
+    .payment_departure_head
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .payment_departure_head.block.bg
+    {
+        padding-block: 40px;
+    }
+
+
+
+    /*-------------------------
+        Payment individuals
+    -------------------------*/
+    .payment_individuals
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .payment_individuals .cont
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .payment_individuals .thumb
+    {
+        width: 200px;
+    }
+
+
+    .payment_individuals .block_head
+    {
+        width: 300px;
+    }
+
+
+    .payment_individuals .data
+    {
+        width: calc(100% - 596px);
+        margin-left: auto;
+    }
+
+
+    .payment_individuals .methods .icon
+    {
+        width: 80px;
+    }
+
+
+    .payment_individuals .prepayment
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap_b);
+    }
+
+
+    .payment_individuals .prepayment > *:not(.icon)
+    {
+        width: calc(100% - 148px);
+    }
+
+
+    .payment_individuals .prepayment .icon
+    {
+        width: 100px;
+    }
+
+
+
+    /*--------------------
+        Payment legals
+    --------------------*/
+    .payment_legals
+    {
+        padding-block: var(--block_padding);
+    }
+
+
+    .payment_legals .cont
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .payment_legals .thumb
+    {
+        width: 200px;
+    }
+
+
+    .payment_legals .block_head
+    {
+        width: 300px;
+    }
+
+
+    .payment_legals .data
+    {
+        width: calc(100% - 596px);
+        margin-left: auto;
+    }
+
+
+
+    /*------------------
+        Measurements
+    ------------------*/
+    .measurements .cont
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .measurements .data
+    {
+        width: calc(100% - 1008px);
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--block_padding);
+    }
+
+
+    .measurements .image
+    {
+        width: 480px;
+    }
+
+
+    .measurements .info
+    {
+        width: 480px;
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*--------------
+        Delivery
+    --------------*/
+    .delivery .data
+    {
+        padding-block: 60px;
+        padding-inline: 60px;
+    }
+
+
+    .delivery .item
+    {
+        width: 340px;
+    }
+
+
+    .delivery .item.blue
+    {
+        width: calc(100% - 752px);
+        padding-inline: 228px var(--cont_padding_double);
+    }
+
+
+    .delivery .item .desc
+    {
+        min-height: 4lh;
+    }
+
+
+    .delivery .item .thumb
+    {
+        left: -60px;
+
+        width: 280px;
+    }
+
+
+
+    /*--------------------
+        Letters thanks
+    --------------------*/
+    .letters_thanks .block_head
+    {
+        width: 500px;
+
+        gap: var(--block_padding);
+    }
+
+
+    .letters_thanks .data
+    {
+        width: calc(100% - 548px);
+    }
+
+
+
+    /*---------------------
+        Private reviews
+    ---------------------*/
+    .private_reviews .review
+    {
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    /*----------------
+        Add review
+    ----------------*/
+    .add_review .data
+    {
+        padding-block: 60px;
+        padding-inline: 60px;
+    }
+
+
+    .add_review .form .submit_btn
+    {
+        width: 360px;
+    }
+
+
+
+    /*----------------------
+        Partnership head
+    ----------------------*/
+    .partnership_head
+    {
+        padding-top: var(--inner_gap);
+    }
+
+
+    .partnership_head .data
+    {
+        min-height: 600px;
+        padding-block: 60px;
+        padding-inline: 60px;
+
+        border-radius: var(--border_radius_b);
+    }
+
+
+    .partnership_head .requests .block_head
+    {
+        width: 300px;
+    }
+
+
+    .partnership_head .requests .grid_row
+    {
+        width: calc(960px + var(--inner_gap_m));
+    }
+
+
+    .partnership_head .requests .item
+    {
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .partnership_head .requests .item .icon svg
+    {
+        width: 28px;
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .item
+    {
+        margin-top: 80px;
+        padding-block: 120px var(--cont_padding_double);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .why_we .item .thumb
+    {
+        top: -80px;
+
+        width: 200px;
+    }
+
+
+
+    /*----------------
+        Cases head
+    ----------------*/
+    .cases_head
+    {
+        margin-bottom: 48px;
+    }
+
+
+    .cases_head.block.bg
+    {
+        padding-block: 40px 16px;
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head .col
+    {
+        width: calc(100% - 500px - var(--inner_gap));
+    }
+
+
+    .about_head .info
+    {
+        width: 500px;
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*-----------
+        Trust
+    -----------*/
+    .trust .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--inner_gap_m);
+    }
+
+
+    .trust .item
+    {
+        padding-block: var(--block_padding);
+        padding-inline: var(--cont_padding_double);
+
+        border-radius: var(--border_radius_b);
+    }
+
+
+    .trust .item .val
+    {
+        font-size: 80px;
+        line-height: calc(100% + 10px);
+    }
+
+
+
+    /*-------------------
+        Why choose us
+    -------------------*/
+    .why_choose_us .item
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .why_choose_us .item:nth-child(1),
+    .why_choose_us .item:nth-child(5)
+    {
+        height: 292px;
+    }
+
+
+    .why_choose_us .item:nth-child(2),
+    .why_choose_us .item:nth-child(4)
+    {
+        height: 316px;
+    }
+
+
+    .why_choose_us .item:nth-child(3)
+    {
+        height: 340px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info
+    {
+        padding-top: var(--block_padding);
+    }
+
+
+
+    .project_info .project_title
+    {
+        width: 840px;
+        margin-bottom: var(--block_head_offset);
+    }
+
+
+
+    .project_info .features
+    {
+        right: calc(var(--cont_padding) + var(--block_padding));
+
+        width: 500px;
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    .project_info .task .info
+    {
+        width: 668px;
+        padding: var(--inner_gap);
+    }
+
+
+
+    .project_info .solution .col,
+    .project_info .difficulties .col,
+    .project_info .results .col
+    {
+        width: 400px;
+    }
+
+
+    .project_info .solution .data,
+    .project_info .difficulties .data,
+    .project_info .results .data
+    {
+        width: calc(100% - 448px);
+    }
+
+
+    .project_info .difficulties .item
+    {
+        padding: var(--inner_gap);
+    }
+
+
+
+    .project_info .photo_gallery
+    {
+        margin-top: 80px;
+    }
+
+
+
+    .project_info .back_link
+    {
+        margin-top: 60px;
+    }
+
+
+    .project_info .back_link a
+    {
+        width: 340px;
     }
 
 

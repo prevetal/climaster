@@ -11,6 +11,17 @@
 
 
 
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination a
+    {
+        min-width: 44px;
+        height: 40px;
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -332,8 +343,15 @@
     }
 
 
+    .steps .data .text_block
+    {
+        margin-bottom: 0;
+    }
 
-    .steps .image
+
+
+    .steps .image,
+    .steps .image.small_w
     {
         width: 100%;
         margin-top: var(--block_padding);
@@ -427,6 +445,14 @@
     }
 
 
+    .cases_page .cont > .grid_row
+    {
+        --items_per_line: 2;
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
     .cases .block_head
     {
         --width_multiplier: 1;
@@ -443,6 +469,24 @@
     .cases .swiper-button-prev
     {
         display: none;
+    }
+
+
+    .cases .case .images .features
+    {
+        gap: 4px;
+    }
+
+
+    .cases .case .details .arrow
+    {
+        width: 48px;
+    }
+
+
+    .cases .case .details .arrow .icon
+    {
+        width: 20px;
     }
 
 
@@ -480,34 +524,42 @@
     /*-------------
         Reviews
     -------------*/
-    .reviews .cont
+    .reviews .cont > .data
     {
-        padding: 0;
+        width: calc(100% + var(--cont_padding_double));
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
     }
 
 
     .reviews .grid_row
     {
+        --items_per_line: 3;
+    }
+
+
+    .reviews .grid_row.inline
+    {
         display: grid;
         overflow: auto;
 
-        width: calc(100% + var(--inner_gap_b) * 4);
+        width: calc(100% + var(--cont_padding_double));
         margin-block: calc(var(--block_padding) * -1) 0;
-        margin-inline: calc(var(--inner_gap_b) * -2);
+        margin-inline: calc(var(--cont_padding) * -1);
         padding-block: var(--block_padding) 0;
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--cont_padding);
 
         gap: var(--inner_gap_b);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
-        scroll-padding: 0 var(--inner_gap_b);
+        scroll-padding: 0 var(--cont_padding);
         scroll-snap-type: x mandatory;
         scrollbar-color: transparent transparent;
         scrollbar-width: thin;
     }
 
 
-    .reviews .grid_row::-webkit-scrollbar
+    .reviews .grid_row.inline::-webkit-scrollbar
     {
         display: none;
 
@@ -518,13 +570,13 @@
     }
 
 
-    .reviews .grid_row::-webkit-scrollbar-thumb
+    .reviews .grid_row.inline::-webkit-scrollbar-thumb
     {
         background-color: transparent;
     }
 
 
-    .reviews .grid_row > *
+    .reviews .grid_row.inline > *
     {
         width: 200px;
         margin: 0;
@@ -541,7 +593,23 @@
 
     .reviews .all_link
     {
-        padding-inline: var(--cont_padding);
+        padding-inline: 0;
+    }
+
+
+
+    /*-----------------
+        Reviews page
+    -----------------*/
+    .reviews_page .grid_row > *.stats
+    {
+        --width_multiplier: 3;
+    }
+
+
+    .reviews_page .stats .item .val
+    {
+        font-size: 24px;
     }
 
 
@@ -561,34 +629,43 @@
     /*-----------
         Certs
     -----------*/
-    .certs .cont
+    .certs .data
     {
-        padding: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
     }
 
 
-    .certs .grid_row
+    .certs .grid_row,
+    .certs .grid_row.big_offsets
+    {
+        --items_per_line: 4;
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .certs .grid_row.inline
     {
         display: grid;
         overflow: auto;
 
-        width: calc(100% + var(--inner_gap_b) * 4);
+        width: calc(100% + var(--cont_padding_double));
         margin-block: calc(var(--block_padding) * -1) 0;
-        margin-inline: calc(var(--inner_gap_b) * -2);
+        margin-inline: calc(var(--cont_padding) * -1);
         padding-block: var(--block_padding) 0;
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--cont_padding);
 
         gap: var(--inner_gap_b);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
-        scroll-padding: 0 var(--inner_gap_b);
+        scroll-padding: 0 var(--cont_padding);
         scroll-snap-type: x mandatory;
         scrollbar-color: transparent transparent;
         scrollbar-width: thin;
     }
 
 
-    .certs .grid_row::-webkit-scrollbar
+    .certs .grid_row.inline::-webkit-scrollbar
     {
         display: none;
 
@@ -599,13 +676,13 @@
     }
 
 
-    .certs .grid_row::-webkit-scrollbar-thumb
+    .certs .grid_row.inline::-webkit-scrollbar-thumb
     {
         background-color: transparent;
     }
 
 
-    .certs .grid_row > *
+    .certs .grid_row.inline > *
     {
         width: 160px;
         margin: 0;
@@ -616,7 +693,357 @@
 
     .certs .all_link
     {
+        padding-inline: 0;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .info
+    {
+        width: 100%;
+    }
+
+
+    .contacts_info .map
+    {
+        width: 100%;
+        height: 320px;
+        margin-top: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        Contacts data
+    -------------------*/
+    .contacts_data .requisites
+    {
+        width: 100%;
+    }
+
+
+    .contacts_data .feedback
+    {
+        width: 100%;
+        margin-top: var(--block_padding);
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .data
+    {
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .block_head
+    {
+        margin-bottom: var(--inner_gap_m);
+    }
+
+
+    .guarantees .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-block: var(--cont_padding_double) 0;
         padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_b);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .guarantees .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .guarantees .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .guarantees .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .guarantees .item
+    {
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .guarantees .item .thumb
+    {
+        width: 148px;
+    }
+
+
+
+    /*----------------------
+        Warranty install
+    ----------------------*/
+    .warranty_install .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+    }
+
+
+    .warranty_install .items
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------------------
+        For save warranty
+    -----------------------*/
+    .for_save_warranty .data
+    {
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .for_save_warranty .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-block: calc(var(--block_padding) * -1) 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-block: var(--block_padding) 0;
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_b);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .for_save_warranty .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .for_save_warranty .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .for_save_warranty .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*-------------------
+        Save warranty
+    -------------------*/
+    .save_warranty .block_head
+    {
+        width: 100%;
+    }
+
+
+    .save_warranty .grid_row
+    {
+        width: calc(100% + var(--inner_gap_m));
+        margin-top: var(--block_padding);
+    }
+
+
+    .save_warranty .item
+    {
+        min-height: 0;
+    }
+
+
+    .save_warranty .item .number
+    {
+        width: 52px;
+    }
+
+
+
+    /*------------------
+        Measurements
+    ------------------*/
+    .measurements .info
+    {
+        padding-inline: var(--inner_gap_b);
+    }
+
+
+
+    /*--------------
+        Delivery
+    --------------*/
+    .delivery .item .desc
+    {
+        min-height: 4lh;
+    }
+
+
+
+    /*----------------------
+        Partnership head
+    ----------------------*/
+    .partnership_head .requests .grid_row
+    {
+        --items_per_line: 2;
+    }
+
+
+
+    /*----------------
+        About head
+    ----------------*/
+    .about_head .col
+    {
+        width: 100%;
+        margin-bottom: var(--inner_gap);
+    }
+
+
+    .about_head .info
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------
+        Trust
+    -----------*/
+    .trust .grid_row
+    {
+        --items_per_line: 2;
+    }
+
+
+    .trust .item
+    {
+        min-height: 200px;
+    }
+
+
+    .trust .item .val
+    {
+        font-size: 60px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .project_title
+    {
+        width: 100%;
+    }
+
+
+
+    .project_info .features
+    {
+        position: relative;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+        margin-bottom: var(--block_padding);
+    }
+
+
+
+    .project_info .task
+    {
+        margin-bottom: var(--block_padding);
+    }
+
+
+    .project_info .task .image img
+    {
+        min-height: 340px;
+    }
+
+
+    .project_info .task .info
+    {
+        width: calc(100% - var(--inner_gap) * 2);
+    }
+
+
+    .project_info .solution .text_block ul li,
+    .project_info .difficulties .text_block ul li,
+    .project_info .results .text_block ul li,
+    .project_info .solution .item ul li
+    {
+        padding-left: 28px;
+    }
+
+
+
+    .project_info .back_link
+    {
+        margin-top: var(--outside_gap_m);
+    }
+
+
+    .project_info .back_link a
+    {
+        width: 100%;
     }
 
 

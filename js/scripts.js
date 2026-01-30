@@ -136,6 +136,45 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	// Photo gallery slider
+	const photoGallerySliders = [],
+		photoGallery = document.querySelectorAll('.photo_gallery .swiper')
+
+	photoGallery.forEach((el, i) => {
+		el.classList.add('photo_gallery_s' + i)
+
+		let options = {
+			loop: true,
+			loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			lazy: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 'auto',
+					spaceBetween: 12
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 24
+				},
+				1024: {
+					slidesPerView: 4,
+					spaceBetween: 24
+				}
+			},
+		}
+
+		photoGallerySliders.push(new Swiper('.photo_gallery_s' + i, options))
+	})
+
+
 	// Fancybox
 	const fancyOptions = {
 		dragToClose: false,
@@ -249,6 +288,16 @@ document.addEventListener('DOMContentLoaded', function() {
 				mask: '+{7} (000) 000-00-00',
 				lazy: true
 			})
+		})
+	}
+
+
+	// Select file
+	const fileInputs = document.querySelectorAll('form input[type=file]')
+
+	if (fileInputs) {
+		fileInputs.forEach(el => {
+			el.addEventListener('change', () => el.closest('.file').querySelector('label span').innerText = el.value)
 		})
 	}
 
