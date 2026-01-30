@@ -110,12 +110,6 @@
 
 
 
-    header .services_menu
-    {
-        gap: 0;
-    }
-
-
     header .services_menu a
     {
         padding-inline: var(--inner_gap_m);
@@ -128,12 +122,6 @@
         min-height: 52px;
 
         gap: var(--inner_gap);
-    }
-
-
-    header .solutions_menu .items
-    {
-        gap: 0;
     }
 
 
