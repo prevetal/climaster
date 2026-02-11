@@ -6,14 +6,14 @@
     :root
     {
         --cont_padding: 20px;
-        --font_size_title_b: 33px;
+        --font_size_title_l: 33px;
         --font_size_title: 25px;
         --font_size_title_s: 22px;
         --font_size_title_xs: 19px;
-        --inner_gap_b: 20px;
+        --inner_gap_xl: 20px;
         --outside_gap: 60px;
         --outside_gap_m: 48px;
-        --border_radius_b: 32px;
+        --border_radius_l: 32px;
         --border_radius: 24px;
         --border_radius_m: 20px;
     }
@@ -28,6 +28,45 @@
         justify-content: center;
 
         width: 100%;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item
+    {
+        border-radius: var(--border_radius_l);
+    }
+
+
+    .accordion_item .head
+    {
+        padding-inline: var(--inner_gap) var(--inner_gap_xs);
+
+        gap: var(--inner_gap_m);
+        --icon_size: 48px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        width: calc(100% - var(--icon_size) - var(--inner_gap_m));
+
+        font-size: var(--font_size);
+    }
+
+
+    .accordion_item .head .icon svg
+    {
+        width: 18px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding-inline: var(--inner_gap);
     }
 
 
@@ -153,10 +192,10 @@
 
     .first_section .pluses .grid_row
     {
-        --gap_x: var(--inner_gap_b);
-        --gap_y: var(--inner_gap_b);
-        gap: 0;
+        --gap_x: var(--inner_gap_xl);
+        --gap_y: var(--inner_gap_xl);
         --items_per_line: 2;
+        gap: 0;
     }
 
 
@@ -193,7 +232,7 @@
     .about_info .row .data
     {
         width: 100%;
-        padding-block: var(--inner_gap_b);
+        padding-block: var(--inner_gap_xl);
     }
 
 
@@ -203,13 +242,13 @@
     -----------*/
     .stats .data
     {
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
     .stats .grid_row
     {
-        --gap_x: var(--inner_gap_b);
+        --gap_x: var(--inner_gap_xl);
         --items_per_line: 2;
     }
 
@@ -227,7 +266,7 @@
 
     .directions .item + .item
     {
-        margin-top: var(--inner_gap_b);
+        margin-top: var(--inner_gap_xl);
     }
 
 
@@ -244,8 +283,8 @@
 
     .directions .action_form .data
     {
-        padding-inline: var(--inner_gap_b);
-        padding-bottom: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
+        padding-bottom: var(--inner_gap_xl);
     }
 
 
@@ -295,7 +334,7 @@
     ----------*/
     .goal .block_head
     {
-        margin-bottom: var(--inner_gap_b);
+        margin-bottom: var(--inner_gap_xl);
     }
 
 
@@ -314,7 +353,7 @@
 
     .goal .info
     {
-        padding: var(--inner_gap_b);
+        padding: var(--inner_gap_xl);
     }
 
 
@@ -324,8 +363,8 @@
     -----------------*/
     .action_form .data
     {
-        padding-inline: var(--inner_gap_b);
-        padding-bottom: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
+        padding-bottom: var(--inner_gap_xl);
     }
 
 
@@ -353,7 +392,7 @@
     {
         width: 100%;
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
     }
 
 
@@ -382,7 +421,7 @@
 
     .technologies .we
     {
-        padding-block: 160px var(--inner_gap_b);
+        padding-block: 160px var(--inner_gap_xl);
     }
 
 
@@ -398,15 +437,15 @@
     ----------------*/
     .warranties .data
     {
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
     .warranties .grid_row
     {
         --items_per_line: 1;
-        --gap_x: var(--inner_gap_s);
-        --gap_y: var(--inner_gap_s);
+        --gap_x: var(--inner_gap_xs);
+        --gap_y: var(--inner_gap_xs);
     }
 
 
@@ -482,8 +521,8 @@
     --------------*/
     .feedback .data
     {
-        padding-inline: var(--inner_gap_b);
-        padding-bottom: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
+        padding-bottom: var(--inner_gap_xl);
     }
 
 
@@ -613,7 +652,7 @@
     ------------------*/
     .measurements .data
     {
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -657,8 +696,8 @@
     --------------*/
     .delivery .data
     {
-        padding-inline: var(--inner_gap_b);
-        padding-bottom: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
+        padding-bottom: var(--inner_gap_xl);
     }
 
 
@@ -671,14 +710,8 @@
     .delivery .item.blue
     {
         min-height: 0;
-        padding-block: 132px var(--inner_gap_b);
-        padding-inline: var(--inner_gap_b);
-    }
-
-
-    .delivery .item .desc
-    {
-        min-height: 4lh;
+        padding-block: 132px var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -741,7 +774,7 @@
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -789,7 +822,7 @@
 
     .private_reviews .review
     {
-        padding-block: var(--inner_gap_b);
+        padding-block: var(--inner_gap_xl);
     }
 
 
@@ -799,7 +832,7 @@
     ----------------*/
     .add_review .data
     {
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -809,7 +842,7 @@
     ----------------------*/
     .partnership_head .data
     {
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -896,7 +929,7 @@
     ------------*/
     .why_we .item
     {
-        padding-block: 100px var(--inner_gap_b);
+        padding-block: 100px var(--inner_gap_xl);
     }
 
 
@@ -980,9 +1013,1145 @@
     }
 
 
-    .project_info .solution .item .name
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .data + .order_btn
     {
-        min-height: 0;
+        width: 400px;
+        margin-top: var(--block_padding);
+        margin-left: 0;
+    }
+
+
+    .steps .data .order_btn .icon
+    {
+        display: none;
+    }
+
+
+    .steps .data .order_btn span
+    {
+        max-width: calc(100% - 48px - var(--inner_gap));
+    }
+
+
+
+    /*------------------
+        Service head
+    ------------------*/
+    .service_head
+    {
+        padding-top: 0;
+    }
+
+
+    .service_head .cont
+    {
+        padding: 0;
+    }
+
+
+    .service_head .data
+    {
+        padding-block: var(--block_padding) var(--inner_gap);
+        padding-inline: var(--cont_padding);
+
+        border-radius: 0;
+    }
+
+
+
+    .service_head .title br
+    {
+        display: none;
+    }
+
+
+    .service_head .title small
+    {
+        font-size: calc(var(--font_size_title_l) - 12px);
+    }
+
+
+    .service_head .desc br
+    {
+        display: none;
+    }
+
+
+
+    .service_head .btns
+    {
+        flex-direction: column;
+    }
+
+
+    .service_head .btns .btn
+    {
+        width: 100%;
+    }
+
+
+
+    .service_head .advantages .item
+    {
+        padding-block: var(--inner_gap_xs);
+        padding-inline: var(--inner_gap_xs);
+
+        gap: var(--inner_gap_xs);
+    }
+
+
+    .service_head .advantages .item br
+    {
+        display: none;
+    }
+
+
+
+    /*-------------
+        Objects
+    -------------*/
+    .objects .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .objects .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .objects .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .objects .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*------------------
+        Service when
+    ------------------*/
+    .service_when .grid_row,
+    .service_when .grid_row.big
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_when .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_when .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_when .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .service_when .grid_row .block_head
+    {
+        display: none;
+    }
+
+
+    .service_when .block_head.mob
+    {
+        display: flex;
+    }
+
+
+
+    /*-------------------
+        Service steps
+    -------------------*/
+    .service_steps .data.medium
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+    /*---------------------
+        Service systems
+    ---------------------*/
+    .service_systems .item .thumb
+    {
+        height: 304px;
+    }
+
+
+    .service_systems .item .data
+    {
+        flex-wrap: wrap;
+
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_s);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_systems .item .price
+    {
+        top: var(--inner_gap_s);
+        right: var(--inner_gap_s);
+    }
+
+
+    .service_systems .item .btn
+    {
+        width: 100%;
+    }
+
+
+    .service_systems .item .info
+    {
+        padding-inline: 0;
+    }
+
+
+
+    /*--------------------
+        Service prices
+    --------------------*/
+    .service_prices .additional
+    {
+        padding: var(--inner_gap);
+    }
+
+
+    .service_prices .additional .items
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .service_prices .additional .btn
+    {
+        font-size: var(--font_size);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .service_prices .additional .btn .icon
+    {
+        display: none;
+    }
+
+
+    .service_prices .additional .btn span
+    {
+        max-width: calc(100% - 48px - var(--inner_gap_s));
+    }
+
+
+
+    /*--------------------
+        Service schema
+    --------------------*/
+    .service_schema .data .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .service_schema .data .btn
+    {
+        --width_multiplier: 1;
+    }
+
+
+
+    .service_schema .schema .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*--------------------
+        Service modern
+    --------------------*/
+    .service_modern .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .service_modern .item.big
+    {
+        padding-top: 200px;
+
+        --width_multiplier: 1;
+    }
+
+
+    .service_modern .item .thumb,
+    .service_modern .item .thumb.right
+    {
+        width: 100%;
+        height: 180px;
+
+        border-radius: var(--border_radius_m) var(--border_radius_m) 0 0;
+    }
+
+
+    .service_modern .item .thumb:before
+    {
+        background: linear-gradient(180deg, rgba(242, 244, 255, .00) 61.83%, var(--bg_color) 100%);
+    }
+
+
+    .service_modern .item .thumb img
+    {
+        width: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .service_modern .item.big .name,
+    .service_modern .item.big .desc
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------------
+        Service products
+    ----------------------*/
+    .service_products .grid_row
+    {
+        --gap_y: var(--inner_gap);
+        --items_per_line: 1;
+    }
+
+
+    .service_products .product .desc
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------------
+        Service create
+    --------------------*/
+    .service_create .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_create .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_create .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_create .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*---------------------
+        Service tariffs
+    ---------------------*/
+    .service_tariffs .grid_row,
+    .service_tariffs .grid_row.small
+    {
+        --items_per_line: 1;
+    }
+
+
+    .service_tariffs .item .info .items,
+    .service_tariffs .item .info .desc
+    {
+        height: auto !important;
+    }
+
+
+
+    /*--------------
+        Trust us
+    --------------*/
+    .trust_us .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .trust_us .item .icon
+    {
+        width: 40px;
+    }
+
+
+
+    /*------------------
+        Service docs
+    ------------------*/
+    .service_docs .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_docs .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_docs .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_docs .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*------------------
+        Service give
+    ------------------*/
+    .service_give .block_head
+    {
+        display: none;
+    }
+
+
+    .service_give .block_head.mob
+    {
+        display: flex;
+    }
+
+
+    .service_give .block_head .title,
+    .service_give .block_head .desc
+    {
+        width: 100%;
+    }
+
+
+    .service_give .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_give .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_give .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_give .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .service_give .item .icon svg
+    {
+        width: 44px;
+    }
+
+
+
+    /*-------------------
+        Service risks
+    -------------------*/
+    .service_risks .errors
+    {
+        padding: var(--inner_gap);
+    }
+
+
+    .service_risks .errors .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    .service_risks .how_we_do_it
+    {
+        padding: var(--inner_gap);
+    }
+
+
+    .service_risks .how_we_do_it .btn span
+    {
+        max-width: calc(100% - 48px - var(--inner_gap_m));
+    }
+
+
+    .service_risks .how_we_do_it .btn .icon
+    {
+        display: none;
+    }
+
+
+
+    /*---------------------
+        Service tariffs
+    ---------------------*/
+    .service_tariffs .grid_row,
+    .service_tariffs .grid_row.small
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*-----------------
+        Service why
+    -----------------*/
+    .service_why .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*-------------------
+        Package offer
+    -------------------*/
+    .package_offer .data
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+
+    /*--------------------------
+        Service object types
+    --------------------------*/
+    .service_object_types .block_head
+    {
+        display: none;
+    }
+
+
+    .service_object_types .block_head.mob
+    {
+        display: flex;
+    }
+
+
+    .service_object_types .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_object_types .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_object_types .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_object_types .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*---------------------
+        Service typical
+    ---------------------*/
+    .service_typical .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*--------------------
+        Service stages
+    --------------------*/
+    .service_stages .tabs .btn
+    {
+        padding-block: var(--inner_gap_xxs);
+        padding-inline: var(--inner_gap_xxs) var(--inner_gap);
+
+        font-size: var(--font_size);
+    }
+
+
+    .service_stages .tab_content.active
+    {
+        padding: var(--inner_gap);
+    }
+
+
+    .service_stages .text_block
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*-------------------
+        Service signs
+    -------------------*/
+    .service_signs .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_signs .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_signs .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_signs .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*-------------------------
+        Service full prices
+    -------------------------*/
+    .service_full_prices .item .number
+    {
+        width: 52px;
+        margin-bottom: var(--inner_gap);
+    }
+
+
+    .service_full_prices .item .info,
+    .service_full_prices .item .col
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .service_full_prices .item .prices
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .service_full_prices .item .btn
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------------
+        Maintenance
+    -----------------*/
+    .maintenance .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .maintenance .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .maintenance .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .maintenance .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*-----------------------
+        Service guarantee
+    -----------------------*/
+    .service_guarantee .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_guarantee .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_guarantee .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_guarantee .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*------------------------
+        Service advantages
+    ------------------------*/
+    .service_advantages .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_advantages .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_advantages .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_advantages .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .base,
+    .price_included .additional
+    {
+        padding: var(--inner_gap);
+    }
+
+
+    .price_included .additional .items > *
+    {
+        padding-inline: 0;
+    }
+
+
+    .price_included .additional .items .icon
+    {
+        display: none;
+    }
+
+
+
+    .price_included .additional .btn .icon
+    {
+        display: none;
+    }
+
+
+    .price_included .additional .btn span
+    {
+        max-width: calc(100% - 48px - var(--inner_gap));
+    }
+
+
+
+    /*----------------------
+        Service bad/good
+    ----------------------*/
+    .service_bad_good .item .row > *
+    {
+        width: 100%;
+    }
+
+
+    .service_bad_good .item .items .arrow
+    {
+        margin-right: var(--inner_gap_xxs);
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .services .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .services .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .services .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .documents .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .documents .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .documents .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
     }
 
 
@@ -1014,7 +2183,7 @@
     footer .slogan
     {
         width: 100%;
-        margin-top: var(--inner_gap_s);
+        margin-top: var(--inner_gap_xs);
         margin-left: 0;
 
         text-align: center;
@@ -1023,7 +2192,7 @@
 
     footer .messengers
     {
-        margin-left: var(--inner_gap_s);
+        margin-left: var(--inner_gap_xs);
     }
 
 
@@ -1068,7 +2237,7 @@
 
         width: 100%;
 
-        gap: var(--inner_gap_s);
+        gap: var(--inner_gap_xs);
     }
 
 

@@ -22,10 +22,26 @@
     --------------*/
     .all_link a
     {
-        padding-block: var(--inner_gap_s);
-        padding-inline: var(--inner_gap_b) var(--inner_gap_s);
+        padding-block: var(--inner_gap_xs);
+        padding-inline: var(--inner_gap_xl) var(--inner_gap_xs);
 
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-inline: var(--inner_gap_xl) var(--inner_gap_s);
+    }
+
+
+    .accordion_item .data
+    {
+        padding-inline: var(--block_padding) var(--inner_gap_s);
     }
 
 
@@ -37,7 +53,7 @@
     {
         padding-block: var(--inner_gap) 0;
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
     }
 
 
@@ -75,7 +91,7 @@
 
     header .btns
     {
-        margin-left: var(--inner_gap_b);
+        margin-left: var(--inner_gap_xl);
     }
 
 
@@ -118,9 +134,9 @@
     header .solutions_menu
     {
         min-height: 60px;
-        padding-inline: var(--inner_gap_b) var(--inner_gap_s);
+        padding-inline: var(--inner_gap_xl) var(--inner_gap_xs);
 
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
     }
 
 
@@ -132,7 +148,7 @@
 
     header .solutions_menu .items a
     {
-        gap: var(--cont_padding_half);
+        gap: var(--inner_gap_s);
     }
 
 
@@ -171,7 +187,7 @@
     -------------------*/
     .first_section
     {
-        margin-bottom: var(--inner_gap_b);
+        margin-bottom: var(--inner_gap_xl);
     }
 
 
@@ -202,7 +218,7 @@
     {
         height: 72px;
 
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
 
         gap: var(--inner_gap);
     }
@@ -215,7 +231,7 @@
     }
 
 
-    .first_section .grid_row
+    .first_section .pluses .grid_row
     {
         gap: 68px;
     }
@@ -223,7 +239,7 @@
 
     .first_section .pluses .item
     {
-        gap: var(--cont_padding_half);
+        gap: var(--inner_gap_s);
     }
 
 
@@ -233,7 +249,7 @@
     ------------*/
     .stores
     {
-        margin-bottom: var(--inner_gap_b);
+        margin-bottom: var(--inner_gap_xl);
     }
 
 
@@ -306,7 +322,7 @@
         padding-block: 48px;
         padding-inline: 48px;
 
-        border-radius: var(--border_radius_b) var(--border_radius_s) var(--border_radius_b) var(--border_radius_b);
+        border-radius: var(--border_radius_l) var(--border_radius_s) var(--border_radius_l) var(--border_radius_l);
     }
 
 
@@ -350,8 +366,8 @@
 
     .object_types .type .thumb .arrow
     {
-        top: var(--cont_padding_half);
-        right: var(--cont_padding_half);
+        top: var(--inner_gap_s);
+        right: var(--inner_gap_s);
 
         width: 60px;
     }
@@ -365,7 +381,7 @@
     .directions .item:nth-child(4)
     {
         min-height: 324px;
-        padding: var(--inner_gap_b);
+        padding: var(--inner_gap_xl);
 
         gap: var(--inner_gap);
     }
@@ -437,7 +453,7 @@
     .microclimate .item
     {
         min-height: 240px;
-        padding: var(--inner_gap_b);
+        padding: var(--inner_gap_xl);
     }
 
 
@@ -468,7 +484,7 @@
 
     .microclimate > .bg
     {
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
     }
 
 
@@ -482,6 +498,12 @@
     }
 
 
+    .steps .block_head .title.big_w
+    {
+        width: 948px;
+    }
+
+
     .steps .block_head .desc
     {
         width: 500px;
@@ -491,8 +513,8 @@
 
     .steps .tabs .btn
     {
-        padding-block: var(--inner_gap_s);
-        padding-inline: var(--inner_gap_s);
+        padding-block: var(--inner_gap_xs);
+        padding-inline: var(--inner_gap_xs);
 
         font-size: var(--font_size);
 
@@ -502,19 +524,25 @@
 
     .steps .tabs .inner
     {
-        padding-block: var(--inner_gap_s);
-        padding-inline: var(--inner_gap_s);
+        padding-block: var(--inner_gap_xs);
+        padding-inline: var(--inner_gap_xs);
     }
 
 
-    .steps .tab_content.active
+    .steps .tabs .btn.small
     {
-        padding-block: var(--block_padding);
-        padding-inline: var(--block_padding);
+        font-size: calc(var(--font_size) - 1px);
+    }
+
+
+    .steps .tabs .btn.smallest
+    {
+        font-size: calc(var(--font_size) - 2px);
     }
 
 
 
+    .steps .tab_content.active,
     .steps .tab_content.big_pad.active
     {
         padding-block: var(--block_padding);
@@ -692,8 +720,8 @@
 
     .cases_page .cont > .grid_row
     {
-        --gap_x: var(--inner_gap_b);
-        --gap_y: var(--inner_gap_b);
+        --gap_x: var(--inner_gap_xl);
+        --gap_y: var(--inner_gap_xl);
     }
 
 
@@ -701,25 +729,25 @@
     {
         margin-bottom: var(--inner_gap_m);
 
-        gap: var(--inner_gap_s);
+        gap: var(--inner_gap_xs);
     }
 
 
     .cases .case .images .thumbs
     {
-        --gap_x: var(--inner_gap_s);
-        --gap_y: var(--inner_gap_s);
+        --gap_x: var(--inner_gap_xs);
+        --gap_y: var(--inner_gap_xs);
     }
 
 
     .cases .case .images .features,
     .cases .case .images .sticker
     {
-        bottom: var(--cont_padding_half);
-        left: var(--cont_padding_half);
+        bottom: var(--inner_gap_s);
+        left: var(--inner_gap_s);
 
         max-width: calc(100% - var(--cont_padding));
-        padding-inline: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_xs);
     }
 
 
@@ -730,8 +758,8 @@
     .technologies .item
     {
         min-height: 240px;
-        padding-block: var(--inner_gap_b);
-        padding-inline: var(--inner_gap_b);
+        padding-block: var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_xl);
 
         gap: var(--inner_gap);
     }
@@ -739,7 +767,7 @@
 
     .technologies .we
     {
-        padding-block: 120px var(--inner_gap_b);
+        padding-block: 120px var(--inner_gap_xl);
     }
 
 
@@ -787,7 +815,7 @@
 
     .reviews .cont > .data:before
     {
-        height: calc(100% - 200px - var(--inner_gap_b));
+        height: calc(100% - 200px - var(--inner_gap_xl));
     }
 
 
@@ -800,7 +828,7 @@
 
     .reviews .review .thumb
     {
-        margin-bottom: var(--inner_gap_s);
+        margin-bottom: var(--inner_gap_xs);
     }
 
 
@@ -908,18 +936,6 @@
     .articles .article
     {
         gap: var(--inner_gap_m);
-    }
-
-
-    .articles .article .name
-    {
-        min-height: 2lh;
-    }
-
-
-    .articles .article .desc
-    {
-        min-height: 3lh;
     }
 
 
@@ -1055,7 +1071,7 @@
     .payment_individuals .prepayment
     {
         padding-block: var(--inner_gap);
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -1162,12 +1178,6 @@
     }
 
 
-    .delivery .item .desc
-    {
-        min-height: 4lh;
-    }
-
-
     .delivery .item .thumb
     {
         left: -60px;
@@ -1237,7 +1247,7 @@
         padding-block: 60px;
         padding-inline: 60px;
 
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
     }
 
 
@@ -1335,7 +1345,7 @@
         padding-block: var(--block_padding);
         padding-inline: var(--cont_padding_double);
 
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
     }
 
 
@@ -1452,6 +1462,1038 @@
     .project_info .back_link a
     {
         width: 340px;
+    }
+
+
+
+    /*------------------
+        Service head
+    ------------------*/
+    .service_head
+    {
+        padding-top: var(--inner_gap_l);
+    }
+
+
+    .service_head .data
+    {
+        min-height: 600px;
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+    .service_head .info,
+    .service_head .info.big_w
+    {
+        width: 848px;
+
+        gap: var(--cont_padding_double);
+    }
+
+
+    .service_head .title small
+    {
+        font-size: calc(var(--font_size_title_l) - 18px);
+    }
+
+
+
+    .service_head .btns
+    {
+        width: 348px;
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .service_head .btns .btn
+    {
+        height: 72px;
+    }
+
+
+
+    .service_head .advantages .row
+    {
+        width: calc(100% - 348px);
+    }
+
+
+    .service_head .advantages .row.big_w
+    {
+        width: calc(100% - 268px);
+    }
+
+
+    .service_head .advantages .item
+    {
+        padding-inline: var(--inner_gap_m);
+
+        --icon_size: 48px;
+        gap: var(--inner_gap_m);
+    }
+
+
+    .service_head .advantages .icon + *
+    {
+        width: calc(100% - var(--icon_size) - var(--inner_gap_m));
+    }
+
+
+    .service_head .advantages .sub_title,
+    .service_head .numbers .sub_title
+    {
+        width: 300px;
+    }
+
+
+    .service_head .advantages .sub_title.small_w
+    {
+        width: 220px;
+    }
+
+
+
+    /*-------------
+        Objects
+    -------------*/
+    .objects:not(.block)
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .objects .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*------------------
+        Service when
+    ------------------*/
+    .service_when .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_when .item .name br
+    {
+        display: none;
+    }
+
+
+
+    .service_when .total
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+
+        font-size: var(--font_size_title_s);
+    }
+
+
+
+    /*-------------------
+        Service steps
+    -------------------*/
+    .service_steps .bg
+    {
+        top: -120px;
+        right: 0;
+
+        width: 448px;
+    }
+
+
+
+    .service_steps .data.small
+    {
+        width: 492px;
+    }
+
+
+
+    .service_steps .result
+    {
+        padding: var(--inner_gap);
+    }
+
+
+
+    .service_steps .what_we_do
+    {
+        width: calc(100% - 800px);
+    }
+
+
+
+    /*---------------------
+        Service systems
+    ---------------------*/
+    .service_systems .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .service_systems .item .price
+    {
+        top: var(--inner_gap);
+        right: var(--inner_gap);
+    }
+
+
+    .service_systems .item .data
+    {
+        padding-block: var(--inner_gap);
+
+        gap: var(--block_padding);
+    }
+
+
+
+    /*--------------------
+        Service prices
+    --------------------*/
+    .service_prices .data
+    {
+        padding-block: var(--cont_padding_double) var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_prices .cols
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .service_prices .cols .col.small
+    {
+        width: 180px;
+        min-width: 180px;
+    }
+
+
+    .service_prices .cols .col
+    {
+        width: 284px;
+        min-width: 284px;
+        padding-block: var(--inner_gap);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+
+    .service_prices .additional
+    {
+        margin-top: var(--inner_gap);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+    .service_prices .additional .info,
+    .service_prices .additional .info.big
+    {
+        width: calc(100% - 480px);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_prices .additional .exact_cost
+    {
+        width: 432px;
+
+        gap: var(--block_padding);
+    }
+
+
+
+    .service_prices .bottom
+    {
+        margin-top: var(--inner_gap);
+    }
+
+
+    .service_prices .depends
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_prices .depends .items
+    {
+        gap: var(--inner_gap_xs) var(--inner_gap_s);
+    }
+
+
+
+    /*--------------------
+        Service schema
+    --------------------*/
+    .service_schema .data
+    {
+        width: calc(100% - 344px);
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_schema .data .info
+    {
+        padding-block: var(--inner_gap);
+    }
+
+
+    .service_schema .data .item
+    {
+        min-height: 199px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_schema .schema
+    {
+        width: 320px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_schema .schema .grid_row
+    {
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .service_schema .schema .item
+    {
+        padding-block: var(--inner_gap_xl);
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ .accordion
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .FAQ .col
+    {
+        width: calc(50% - var(--inner_gap) / 2);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+
+    /*--------------------
+        Service modern
+    --------------------*/
+    .service_modern .block_head .desc
+    {
+        width: 800px;
+    }
+
+
+    .service_modern .item
+    {
+        padding-block: var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+    .service_modern .item .icon
+    {
+        top: var(--inner_gap_s);
+        right: var(--inner_gap_s);
+    }
+
+
+    .service_modern .item .name,
+    .service_modern .item .desc
+    {
+        width: 320px;
+    }
+
+
+
+    /*----------------------
+        Service products
+    ----------------------*/
+    .service_products .grid_row
+    {
+        --gap_x: var(--inner_gap);
+    }
+
+
+    .service_products .product
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_products .product .thumb
+    {
+        top: calc(var(--inner_gap) * -1);
+        right: calc(var(--inner_gap_s) * -1);
+
+        width: 180px;
+    }
+
+
+    .service_products .product .desc
+    {
+        width: 300px;
+    }
+
+
+    .service_products .product .arrow
+    {
+        bottom: var(--inner_gap);
+        left: var(--inner_gap);
+    }
+
+
+
+    /*--------------------
+        Service create
+    --------------------*/
+    .service_create .block_head .title,
+    .service_create .block_head .desc
+    {
+        width: 560px;
+    }
+
+
+    .service_create .item
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*---------------------
+        Service tariffs
+    ---------------------*/
+    .service_tariffs .block_head.row .desc
+    {
+        width: 696px;
+    }
+
+
+    .service_tariffs .item .head .thumb
+    {
+        height: 324px;
+    }
+
+
+    .service_tariffs .item .head .thumb.small
+    {
+        height: 300px;
+    }
+
+
+    .service_tariffs .item:not(:has(.bonus))
+    {
+        padding-bottom: var(--inner_gap_l);
+    }
+
+
+    .service_tariffs .item .head
+    {
+        height: 400px;
+        padding: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_tariffs .item .info
+    {
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_tariffs .item .bonus
+    {
+        padding-block: var(--inner_gap_m);
+        padding-inline: var(--inner_gap);
+    }
+
+
+
+    /*--------------
+        Trust us
+    --------------*/
+    .trust_us .block_head
+    {
+        padding-bottom: 0;
+    }
+
+
+    .trust_us .item
+    {
+        padding: var(--inner_gap);
+    }
+
+
+
+    /*------------------
+        Service docs
+    ------------------*/
+    .service_docs .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*------------------
+        Service give
+    ------------------*/
+    .service_give .block_head .image
+    {
+        top: calc(var(--cont_padding_double) * -1);
+        right: calc(var(--inner_gap) * -1);
+
+        width: 476px;
+    }
+
+
+    .service_give .item
+    {
+        min-height: 240px;
+        padding: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        Service risks
+    -------------------*/
+    .service_risks .block_head .desc
+    {
+        width: 864px;
+    }
+
+
+
+    .service_risks .errors
+    {
+        width: calc(100% - 520px - var(--inner_gap_m));
+        padding: var(--block_padding);
+    }
+
+
+    .service_risks .errors .grid_row
+    {
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap_xl);
+    }
+
+
+    .service_risks .errors .item .icon
+    {
+        width: 44px;
+        margin-bottom: 0;
+    }
+
+
+    .service_risks .errors .item .icon svg
+    {
+        width: 20px;
+    }
+
+
+
+    .service_risks .how_we_do_it
+    {
+        width: 520px;
+    }
+
+
+
+    /*-------------------
+        Package offer
+    -------------------*/
+    .package_offer .data
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    .package_offer .info
+    {
+        width: calc(100% - 448px);
+
+        gap: var(--block_padding);
+    }
+
+
+    .package_offer .block_head .title
+    {
+        width: 352px;
+    }
+
+
+    .package_offer .block_head .desc
+    {
+        width: 320px;
+    }
+
+
+
+    .package_offer .price_info
+    {
+        width: 400px;
+        padding-block: var(--inner_gap) var(--block_padding);
+        padding-inline: var(--block_padding);
+    }
+
+
+    .package_offer .price_info .price
+    {
+        font-size: 36px;
+    }
+
+
+    .package_offer .price_info .price .old
+    {
+        font-size: 26px;
+    }
+
+
+
+    /*-----------------
+        Service why
+    -----------------*/
+    .service_why .block_head
+    {
+        margin-bottom: 72px;
+    }
+
+
+    .service_why .grid_row
+    {
+        --gap_y: 60px;
+    }
+
+
+    .service_why .item
+    {
+        padding: 120px var(--inner_gap) var(--inner_gap);
+    }
+
+
+    .service_why .item .thumb
+    {
+        top: -60px;
+
+        height: 180px;
+    }
+
+
+
+    /*-------------------
+        Service tasks
+    -------------------*/
+    .service_tasks .block_head
+    {
+        padding-bottom: 0;
+    }
+
+
+    .service_tasks .block_head .title
+    {
+        width: calc(100% - 528px);
+    }
+
+
+    .service_tasks .block_head.row .desc
+    {
+        width: 480px;
+    }
+
+
+    .service_tasks .item
+    {
+        padding-block: var(--cont_padding_double);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*--------------------------
+        Service object types
+    --------------------------*/
+    .service_object_types .block_head
+    {
+        gap: var(--cont_padding_double);
+    }
+
+
+    .service_object_types .block_head .image
+    {
+        height: 90%;
+    }
+
+
+    .service_object_types .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_object_types .item .info
+    {
+        padding-inline: var(--inner_gap) 0;
+    }
+
+
+
+    /*---------------------
+        Service typical
+    ---------------------*/
+    .service_typical .item
+    {
+        min-height: 0;
+        padding-block: var(--inner_gap_xl) var(--inner_gap_m);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*--------------------
+        Service stages
+    --------------------*/
+    .service_stages .tabs
+    {
+        width: calc(100% - 688px);
+    }
+
+
+    .service_stages .tab_content.active
+    {
+        width: 640px;
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*-------------------
+        Service signs
+    -------------------*/
+    .service_signs .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+
+    /*-------------------------
+        Service full prices
+    -------------------------*/
+    .service_full_prices .cont > .block_head .title
+    {
+        width: 912px;
+    }
+
+
+    .service_full_prices .cont > .block_head .desc
+    {
+        width: 388px;
+    }
+
+
+    .service_full_prices .item
+    {
+        padding: var(--inner_gap);
+    }
+
+
+    .service_full_prices .item .number
+    {
+        width: 80px;
+    }
+
+
+    .service_full_prices .item .info
+    {
+        width: calc(100% - 760px);
+        margin-left: var(--block_padding);
+    }
+
+
+    .service_full_prices .item .info .name
+    {
+        width: 380px;
+    }
+
+
+    .service_full_prices .item .col
+    {
+        width: 600px;
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*-----------------
+        Maintenance
+    -----------------*/
+    .maintenance .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .maintenance .item .info
+    {
+        padding-inline: var(--inner_gap) 0;
+    }
+
+
+
+    /*-----------------------
+        Service guarantee
+    ----------------------*/
+    .service_guarantee .block_head
+    {
+        padding-bottom: 0;
+    }
+
+
+    .service_guarantee .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+
+    /*-----------------------------
+        Subscription advantages
+    -----------------------------*/
+    .subscription_advantages .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+
+    /*------------------------
+        Service advantages
+    ------------------------*/
+    .service_advantages .block_head
+    {
+        width: 628px;
+    }
+
+
+
+    .service_advantages .data
+    {
+        width: calc(100% - 676px);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    .service_advantages .item
+    {
+        padding: var(--inner_gap);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_advantages .item .name
+    {
+        font-size: var(--font_size_title_xxs);
+    }
+
+
+
+    /*--------------------
+        Service needed
+    --------------------*/
+    .service_needed .item
+    {
+        padding-block: var(--inner_gap_m);
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .service_needed .item .info
+    {
+        padding-block: var(--inner_gap_m);
+        padding-inline: var(--inner_gap) 0;
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .row
+    {
+        --base_width: 640px;
+    }
+
+
+    .price_included .base,
+    .price_included .additional
+    {
+        padding: var(--cont_padding_double);
+    }
+
+
+    .price_included .additional .items
+    {
+        gap: var(--inner_gap_xxs);
+    }
+
+
+
+    /*---------------------
+        Service dangers
+    ---------------------*/
+    .service_dangers .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap);
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .service_dangers .bottom
+    {
+        margin-top: var(--inner_gap);
+        padding-block: var(--inner_gap);
+        padding-inline: var(--cont_padding_double);
+    }
+
+
+
+    /*-------------------
+        Service range
+    -------------------*/
+    .service_range .cont
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .service_range .item
+    {
+        padding: var(--inner_gap);
+    }
+
+
+
+    /*----------------------
+        Service bad/good
+    ----------------------*/
+    .service_bad_good .item
+    {
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_bad_good .item .title,
+    .service_bad_good .item.bad .title
+    {
+        padding-right: 0;
+    }
+
+
+    .service_bad_good .item .title .icon
+    {
+        width: 68px;
+    }
+
+
+    .service_bad_good .item .row > *
+    {
+        width: calc(50% - var(--inner_gap_m) / 2);
+    }
+
+    .service_bad_good .item .items
+    {
+        padding-block: var(--inner_gap);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .item
+    {
+        padding: var(--inner_gap);
+
+        gap: var(--inner_gap_m);
     }
 
 

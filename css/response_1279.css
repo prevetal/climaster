@@ -8,7 +8,7 @@
     {
         --custom_scroll_width: 5px;
         --custom_scroll_height: 5px;
-        --font_size_title_b: 40px;
+        --font_size_title_l: 40px;
         --font_size_title: 36px;
         --font_size_title_s: 28px;
         --font_size_title_xs: 22px;
@@ -79,7 +79,7 @@
 
     header .contacts
     {
-        margin-left: var(--inner_gap_s);
+        margin-left: var(--inner_gap_xs);
     }
 
 
@@ -100,7 +100,7 @@
     header .services_menu
     {
         width: 100%;
-        padding-block: var(--inner_gap_s) 4px;
+        padding-block: var(--inner_gap_xs) 4px;
         padding-inline: 4px;
     }
 
@@ -136,7 +136,7 @@
     {
         width: 100%;
         min-height: 48px;
-        margin-top: var(--inner_gap_s);
+        margin-top: var(--inner_gap_xs);
 
         gap: var(--block_padding);
     }
@@ -273,11 +273,11 @@
     .first_section .pluses .sub_title
     {
         width: 100%;
-        margin-bottom: var(--inner_gap_b);
+        margin-bottom: var(--inner_gap_xl);
     }
 
 
-    .first_section .grid_row
+    .first_section .pluses .grid_row
     {
         gap: var(--cont_padding_double);
     }
@@ -314,7 +314,7 @@
     {
         width: 320px;
         height: 160px;
-        padding: var(--inner_gap_b);
+        padding: var(--inner_gap_xl);
     }
 
 
@@ -322,7 +322,7 @@
     {
         width: 320px;
         height: 160px;
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -343,7 +343,7 @@
     {
         width: calc(100% - 640px);
         padding-block: var(--cont_padding_double);
-        padding-inline: var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -369,8 +369,8 @@
     .about_info .row .info
     {
         width: 320px;
-        padding-block: var(--inner_gap_b);
-        padding-inline: var(--inner_gap_b);
+        padding-block: var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_xl);
     }
 
 
@@ -473,8 +473,8 @@
 
     .directions .item .arrow
     {
-        right: var(--inner_gap_s);
-        bottom: var(--inner_gap_s);
+        right: var(--inner_gap_xs);
+        bottom: var(--inner_gap_xs);
 
         width: 48px;
     }
@@ -580,13 +580,20 @@
     -----------*/
     .steps .block_head .title
     {
-        width: calc(100% - 416px);
+        width: calc(100% - 392px);
+    }
+
+
+    .steps .block_head .title.big_w
+    {
+        width: calc(100% - 280px);
     }
 
 
     .steps .block_head .desc
     {
         width: 368px;
+        margin-top: 0;
     }
 
 
@@ -655,8 +662,8 @@
     .steps .tab_content.active,
     .steps .tab_content.big_pad.active
     {
-        padding-block: var(--inner_gap_b);
-        padding-inline: var(--inner_gap_b);
+        padding-block: var(--inner_gap_xl);
+        padding-inline: var(--inner_gap_xl);
 
         border-radius: var(--border_radius);
         background: radial-gradient(72.39% 73.24% at 27.61% 61.16%, var(--bg) 0%, rgba(255, 255, 255, .00) 100%), var(--bg_grey_soft);
@@ -681,6 +688,31 @@
     {
         width: 48px;
         min-width: 48px;
+    }
+
+
+    .steps .data + .order_btn
+    {
+        width: 380px;
+        height: 64px;
+    }
+
+
+    .steps .data + .order_btn span
+    {
+        max-width: calc(100% - 48px - var(--inner_gap));
+    }
+
+
+    .steps .data + .order_btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .steps .data + .order_btn .arrow svg
+    {
+        width: 20px;
     }
 
 
@@ -725,7 +757,7 @@
     {
         width: 100%;
         min-height: 400px;
-        margin-top: var(--inner_gap_b);
+        margin-top: var(--inner_gap_xl);
     }
 
 
@@ -765,7 +797,7 @@
     .partnership .block_head .desc
     {
         width: 520px;
-        margin-top: var(--inner_gap_s);
+        margin-top: var(--inner_gap_xs);
     }
 
 
@@ -779,7 +811,7 @@
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -821,7 +853,7 @@
     ------------------*/
     .free_consult .data
     {
-        padding: var(--inner_gap_b);
+        padding: var(--inner_gap_xl);
     }
 
 
@@ -857,8 +889,8 @@
     .cases_page .cont > .grid_row
     {
         --items_per_line: 2;
-        --gap_x: var(--inner_gap_b);
-        --gap_y: var(--inner_gap_b);
+        --gap_x: var(--inner_gap_xl);
+        --gap_y: var(--inner_gap_xl);
     }
 
 
@@ -874,7 +906,7 @@
 
     .technologies .we
     {
-        padding-block: 80px var(--inner_gap_b);
+        padding-block: 80px var(--inner_gap_xl);
     }
 
 
@@ -1008,7 +1040,7 @@
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -1045,6 +1077,13 @@
 
 
 
+    .articles .article .info
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+
     /*-----------
         Certs
     -----------*/
@@ -1052,7 +1091,7 @@
     .certs .grid_row.big_offsets
     {
         --gap_x: var(--inner_gap);
-        --gap_y: var(--inner_gap_b);
+        --gap_y: var(--inner_gap_xl);
     }
 
 
@@ -1094,7 +1133,7 @@
     {
         height: 300px;
 
-        border-radius: var(--border_radius_b);
+        border-radius: var(--border_radius_l);
     }
 
 
@@ -1149,7 +1188,7 @@
     .guarantees .item
     {
         margin-top: 60px;
-        padding-block: 100px var(--inner_gap_b);
+        padding-block: 100px var(--inner_gap_xl);
     }
 
 
@@ -1374,12 +1413,6 @@
     }
 
 
-    .delivery .item .desc
-    {
-        min-height: 3lh;
-    }
-
-
     .delivery .item .thumb
     {
         left: -60px;
@@ -1453,7 +1486,7 @@
     .partnership_head .requests .block_head
     {
         width: 100%;
-        margin-bottom: var(--inner_gap_b);
+        margin-bottom: var(--inner_gap_xl);
     }
 
 
@@ -1479,7 +1512,7 @@
         padding-inline: var(--cont_padding);
         padding-top: 48px;
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -1517,7 +1550,7 @@
 
     .why_we .item
     {
-        padding-block: 116px var(--inner_gap_b);
+        padding-block: 116px var(--inner_gap_xl);
     }
 
 
@@ -1584,7 +1617,7 @@
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -1662,7 +1695,7 @@
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_b);
+        gap: var(--inner_gap_xl);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -1700,7 +1733,7 @@
 
     .for_whom .item .thumb
     {
-        margin-top: var(--inner_gap_s);
+        margin-top: var(--inner_gap_xs);
     }
 
 
@@ -1735,7 +1768,7 @@
     .project_info .results .data
     {
         width: 100%;
-        margin-top: var(--inner_gap_b);
+        margin-top: var(--inner_gap_xl);
     }
 
 
@@ -1750,13 +1783,1074 @@
     .project_info .back_link a
     {
         width: 300px;
-        padding-inline: var(--inner_gap_s) var(--inner_gap_b);
+        padding-inline: var(--inner_gap_xs) var(--inner_gap_xl);
     }
 
 
     .project_info .back_link .arrow
     {
         width: 52px;
+    }
+
+
+
+    /*------------------
+        Service head
+    ------------------*/
+    .service_head .info,
+    .service_head .info.big_w
+    {
+        width: calc(100% - 328px);
+        min-height: 260px;
+    }
+
+
+    .service_head .title small
+    {
+        margin-top: var(--inner_gap_s);
+    }
+
+
+
+    .service_head .btns
+    {
+        width: 280px;
+    }
+
+
+    .service_head .btns .btn
+    {
+        height: 64px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_head .btns .btn .icon
+    {
+        width: 28px;
+    }
+
+
+    .service_head .btns .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .service_head .btns .btn .arrow svg
+    {
+        width: 20px;
+    }
+
+
+
+    .service_head .advantages .item
+    {
+        padding-block: var(--inner_gap_s);
+        padding-inline: var(--inner_gap_s);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .service_head .advantages .icon svg
+    {
+        width: 20px;
+    }
+
+
+    .service_head .advantages .icon + *
+    {
+        width: calc(100% - var(--icon_size) - var(--inner_gap_s));
+    }
+
+
+
+    .service_head .numbers .grid_row
+    {
+        justify-content: center;
+        order: 2;
+
+        width: 100%;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_head .numbers .sub_title
+    {
+        width: 100%;
+        margin-bottom: var(--inner_gap);
+    }
+
+
+
+    /*-------------
+        Objects
+    -------------*/
+    .objects .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+
+    /*------------------
+        Service when
+    ------------------*/
+    .service_when .grid_row.inline
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_when .grid_row.inline::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_when .grid_row.inline::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_when .grid_row.inline > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .service_when .item
+    {
+        padding-block: var(--inner_gap_m) var(--inner_gap);
+    }
+
+
+    .service_when .big .item .name br
+    {
+        display: none;
+    }
+
+
+
+    .service_when .total
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        Service steps
+    -------------------*/
+    .service_steps .bg
+    {
+        top: -80px;
+        right: -24px;
+
+        width: 348px;
+    }
+
+
+    .service_steps .block_head .desc.big_w
+    {
+        width: 648px;
+    }
+
+
+    .service_steps .data.medium
+    {
+        width: calc(100% - 428px);
+        max-width: calc(100% - 428px);
+    }
+
+
+
+    .steps .data .order_btn
+    {
+        width: 440px;
+        height: 64px;
+    }
+
+
+    .steps .data .order_btn .icon
+    {
+        width: 28px;
+    }
+
+
+    .steps .data .order_btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .steps .data .order_btn .arrow svg
+    {
+        width: 20px;
+    }
+
+
+
+    /*---------------------
+        Service systems
+    ---------------------*/
+    .service_systems .item
+    {
+        padding-block: var(--inner_gap_m);
+    }
+
+
+    .service_systems .item .thumb
+    {
+        height: 260px;
+    }
+
+
+    .service_systems .item .price
+    {
+        padding-block: var(--inner_gap_xs);
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .service_systems .item .price .label
+    {
+        width: auto;
+    }
+
+
+    .service_systems .item .btn
+    {
+        padding-inline: var(--inner_gap_m) var(--inner_gap_xxs);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .service_systems .item .btn .arrow
+    {
+        width: 40px;
+        min-width: 40px;
+    }
+
+
+    .service_systems .item .data
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .service_systems .item .btn
+    {
+        padding-inline: var(--inner_gap) var(--inner_gap_xxs);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+
+    /*--------------------
+        Service prices
+    --------------------*/
+    .service_prices .cols .col.small
+    {
+        width: 152px;
+        min-width: 152px;
+    }
+
+
+    .service_prices .cols .col
+    {
+        width: 244px;
+        min-width: 244px;
+    }
+
+
+
+    .service_prices .additional .info,
+    .service_prices .additional .info.big
+    {
+        width: 100%;
+    }
+
+
+    .service_prices .additional .exact_cost
+    {
+        width: 100%;
+        margin-top: var(--block_padding);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .service_prices .additional .btn
+    {
+        width: 380px;
+        height: 64px;
+    }
+
+
+    .service_prices .additional .btn .icon
+    {
+        width: 28px;
+    }
+
+
+    .service_prices .additional .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .service_prices .additional .btn .arrow svg
+    {
+        width: 20px;
+    }
+
+
+    .service_prices .additional .btn span
+    {
+        max-width: calc(100% - 24px - 48px - var(--inner_gap) * 2);
+    }
+
+
+
+    .service_prices .bottom .btn
+    {
+        width: 380px;
+        height: 64px;
+    }
+
+
+    .service_prices .bottom .btn .icon
+    {
+        width: 28px;
+    }
+
+
+    .service_prices .bottom .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .service_prices .bottom .btn .arrow svg
+    {
+        width: 20px;
+    }
+
+
+    .service_prices .bottom .btn span
+    {
+        max-width: calc(100% - 24px - 48px - var(--inner_gap) * 2);
+    }
+
+
+
+    /*--------------------
+        Service schema
+    --------------------*/
+    .service_schema .data
+    {
+        width: 100%;
+    }
+
+
+    .service_schema .data .item
+    {
+        min-height: 0;
+    }
+
+
+    .service_schema .schema
+    {
+        width: 100%;
+        margin-top: var(--inner_gap_xl);
+    }
+
+
+    .service_schema .schema .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+    .service_schema .schema .item
+    {
+        min-height: 0;
+    }
+
+
+
+    /*--------------------
+        Service modern
+    --------------------*/
+    .service_modern .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .service_modern .item .icon
+    {
+        width: 52px;
+    }
+
+
+    .service_modern .item .icon svg
+    {
+        width: 20px;
+    }
+
+
+    .service_modern .item .name
+    {
+        padding-right: 60px;
+    }
+
+
+    .service_modern .item .name br
+    {
+        display: none;
+    }
+
+
+    .service_modern .item .desc
+    {
+        width: 100%;
+    }
+
+
+    .service_modern .item.big .name,
+    .service_modern .item.big .desc
+    {
+        width: 260px;
+    }
+
+
+
+    /*----------------------
+        Service products
+    ----------------------*/
+    .service_products .product .thumb
+    {
+        right: calc(var(--inner_gap) * -1);
+
+        width: 148px;
+    }
+
+
+    .service_products .product .desc
+    {
+        width: 260px;
+    }
+
+
+    .service_products .product .price.small
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    /*--------------------
+        Service create
+    --------------------*/
+    .service_create .block_head .title,
+    .service_create .block_head .desc
+    {
+        width: 100%;
+    }
+
+
+    .service_create .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+
+    /*---------------------
+        Service tariffs
+    ---------------------*/
+    .service_tariffs .item .head .thumb
+    {
+        top: var(--cont_padding_double);
+
+        height: 260px;
+
+        transform: none;
+    }
+
+
+    .service_tariffs .item .head .thumb.small
+    {
+        height: 248px;
+    }
+
+
+
+    /*--------------
+        Trust us
+    --------------*/
+    .trust_us .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+    .trust_us .item .icon
+    {
+        width: 44px;
+    }
+
+
+
+    /*------------------
+        Service docs
+    ------------------*/
+    .service_docs .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+
+    /*------------------
+        Service give
+    ------------------*/
+    .service_give .block_head .image
+    {
+        top: 0;
+
+        width: 380px;
+    }
+
+
+
+    /*-------------------
+        Service risks
+    -------------------*/
+    .service_risks .block_head .desc
+    {
+        width: 640px;
+    }
+
+
+
+    .service_risks .errors
+    {
+        width: 100%;
+    }
+
+
+    .service_risks .errors .grid_row
+    {
+        --items_per_line: 3;
+        --gap_x: var(--block_padding);
+        --gap_y: var(--block_padding);
+    }
+
+
+
+    .service_risks .how_we_do_it
+    {
+        width: 100%;
+    }
+
+
+    .service_risks .how_we_do_it .btn
+    {
+        width: 400px;
+        height: 64px;
+    }
+
+
+    .service_risks .how_we_do_it .btn span
+    {
+        max-width: calc(100% - 24px - 48px - var(--inner_gap_m) * 2);
+    }
+
+
+    .service_risks .how_we_do_it .btn .icon
+    {
+        width: 24px;
+    }
+
+
+    .service_risks .how_we_do_it .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+
+    /*-------------------
+        Package offer
+    -------------------*/
+    .package_offer .info
+    {
+        width: 100%;
+    }
+
+
+    .package_offer .block_head .desc
+    {
+        align-self: center;
+
+        width: 284px;
+    }
+
+
+
+    .package_offer .info .btn
+    {
+        min-height: 64px;
+    }
+
+
+    .package_offer .info .btn span
+    {
+        width: calc(100% - 48px - var(--inner_gap));
+    }
+
+
+    .package_offer .info .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .package_offer .info .btn .arrow .icon
+    {
+        width: 20px;
+    }
+
+
+
+    .package_offer .price_info
+    {
+        width: 100%;
+        margin-top: var(--inner_gap);
+    }
+
+
+
+    /*-------------------
+        Service tasks
+    -------------------*/
+    .service_tasks .block_head .title
+    {
+        width: 100%;
+    }
+
+
+    .service_tasks .block_head.row .desc
+    {
+        width: 100%;
+    }
+
+
+    .service_tasks .item
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+
+    /*--------------------------
+        Service object types
+    --------------------------*/
+    .service_object_types .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+
+    /*--------------------
+        Service stages
+    --------------------*/
+    .service_stages .tabs
+    {
+        width: calc(100% - 588px);
+    }
+
+
+    .service_stages .tab_content.active
+    {
+        width: 560px;
+    }
+
+
+
+    /*-------------------
+        Service signs
+    -------------------*/
+    .service_signs .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+
+    /*-------------------------
+        Service full prices
+    -------------------------*/
+    .service_full_prices .item .number
+    {
+        width: 60px;
+    }
+
+
+    .service_full_prices .item .info
+    {
+        width: calc(100% - 84px);
+    }
+
+
+    .service_full_prices .item .col
+    {
+        width: calc(100% - 84px);
+        margin-top: var(--inner_gap);
+        margin-left: auto;
+    }
+
+
+    .service_full_prices .item .btn
+    {
+        min-height: 64px;
+    }
+
+
+    .service_full_prices .item .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .service_full_prices .item .btn .arrow .icon
+    {
+        width: 20px;
+    }
+
+
+
+    /*-----------------------
+        Service guarantee
+    -----------------------*/
+    .service_guarantee .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+
+    /*-----------------------------
+        Subscription advantages
+    -----------------------------*/
+    .subscription_advantages .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .subscription_advantages .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .subscription_advantages .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .subscription_advantages .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*------------------------
+        Service advantages
+    ------------------------*/
+    .service_advantages .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+    }
+
+
+
+    .service_advantages .data
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------------
+        Service needed
+    --------------------*/
+    .service_needed .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_needed .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_needed .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_needed .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .row
+    {
+        --base_width: 100%;
+    }
+
+
+
+    .price_included .additional
+    {
+        width: 100%;
+        margin-top: var(--inner_gap);
+    }
+
+
+    .price_included .additional .items
+    {
+        margin-bottom: var(--inner_gap_s);
+    }
+
+
+    .price_included .additional .btn
+    {
+        width: 460px;
+        height: 64px;
+    }
+
+
+    .price_included .additional .btn span
+    {
+        max-width: calc(100% - 28px - 48px - var(--inner_gap) * 2);
+    }
+
+
+    .price_included .additional .btn .icon
+    {
+        width: 28px;
+    }
+
+
+    .price_included .additional .btn .arrow
+    {
+        width: 48px;
+    }
+
+
+    .price_included .additional .btn .arrow svg
+    {
+        width: 20px;
+    }
+
+
+
+    /*---------------------
+        Service dangers
+    ---------------------*/
+    .service_dangers .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_dangers .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_dangers .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_dangers .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .service_dangers .bottom
+    {
+        padding-block: var(--inner_gap_m);
+    }
+
+
+
+    /*-------------------
+        Service range
+    -------------------*/
+    .service_range .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_xl);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .service_range .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .service_range .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .service_range .grid_row > *
+    {
+        width: 320px;
+        margin: 0;
+
+        scroll-snap-align: start;
     }
 
 

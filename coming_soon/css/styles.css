@@ -19,10 +19,10 @@
     --font_size_title: 53px;
     --font_size_title_s: 28px;
     --font_family: 'Manrope', 'Arial', sans-serif;
-    --inner_gap_b: 32px;
+    --inner_gap_xl: 32px;
     --inner_gap: 24px;
     --inner_gap_m: 16px;
-    --inner_gap_s: 8px;
+    --inner_gap_xs: 8px;
     --border_radius: 40px;
 }
 
@@ -393,7 +393,7 @@ header .contacts .email a
     width: 342px;
     max-width: 100%;
     height: 80px;
-    padding-block: var(--inner_gap_s);
+    padding-block: var(--inner_gap_xs);
     padding-inline: var(--inner_gap);
 
     font-weight: 700;
@@ -411,8 +411,8 @@ header .contacts .email a
 {
     justify-content: space-between;
 
-    padding-right: var(--inner_gap_s);
-    padding-left: var(--inner_gap_b);
+    padding-right: var(--inner_gap_xs);
+    padding-left: var(--inner_gap_xl);
 
     color: var(--light_color);
     background: var(--secondary_color);
@@ -469,7 +469,7 @@ header .contacts .email a
     header .contacts
     {
         min-width: 0;
-        margin-left: var(--inner_gap_b);
+        margin-left: var(--inner_gap_xl);
     }
 
 
@@ -498,17 +498,17 @@ header .contacts .email a
 {
     :root
     {
-        --font_size_b: 18px;
+        --font_size_l: 18px;
         --font_size: 16px;
         --font_size_m: 14px;
         --font_size_s: 14px;
         --font_size_xs: 12px;
         --font_size_title: 48px;
         --font_size_title_s: 24px;
-        --inner_gap_b: 24px;
+        --inner_gap_xl: 24px;
         --inner_gap: 20px;
         --inner_gap_m: 16px;
-        --inner_gap_s: 8px;
+        --inner_gap_xs: 8px;
         --border_radius: 34px;
     }
 
@@ -650,7 +650,7 @@ header .contacts .email a
     {
         --cont_padding: 20px;
         --font_size_title_s: 19px;
-        --inner_gap_b: 20px;
+        --inner_gap_xl: 20px;
     }
 
 

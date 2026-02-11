@@ -377,6 +377,228 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		})
 	}
+
+
+	// Accordion
+	$('body').on('click', '.accordion .accordion_item .head', function(e) {
+		e.preventDefault()
+
+		let item = $(this).closest('.accordion_item'),
+			accordion = $(this).closest('.accordion')
+
+		if (item.hasClass('active')) {
+			item.removeClass('active').find('.data').slideUp(300)
+		} else {
+			accordion.find('.accordion_item').removeClass('active')
+			accordion.find('.data').slideUp(300)
+
+			item.addClass('active').find('.data').slideDown(300)
+		}
+	})
+
+
+	// Service prices
+	const servicePricesTitles = document.querySelectorAll('.service_prices .cols .col .title'),
+		servicePricesCols = document.querySelectorAll('.service_prices .cols .col')
+
+	if (servicePricesCols[0]) {
+		const servicePricesRowsCount = servicePricesCols[0].querySelectorAll('.items > div').length
+
+		if (servicePricesTitles) {
+			setHeight(servicePricesTitles)
+		}
+
+		if (servicePricesRowsCount) {
+			for (let i = 0; i < servicePricesRowsCount; i++) {
+				const items = [...servicePricesCols]
+					.map(col => col.querySelectorAll('.items > div')[i])
+					.filter(Boolean)
+
+				setHeight(items)
+			}
+		}
+	}
+
+
+	// Articles height
+	document
+		.querySelectorAll('.articles .grid_row')
+		.forEach(articlesMatchHeights)
+
+	// Service tariffs heights
+	document
+		.querySelectorAll('.service_tariffs .grid_row')
+		.forEach(serviceTariffsMatchHeights)
+
+	// Objects height
+	document
+		.querySelectorAll('.objects .grid_row')
+		.forEach(objectsMatchHeights)
+
+	// Service when height
+	document
+		.querySelectorAll('.service_when .grid_row')
+		.forEach(serviceWhenMatchHeights)
+
+	// Service modern height
+	document
+		.querySelectorAll('.service_modern .grid_row')
+		.forEach(serviceModernMatchHeights)
+
+	// Service products height
+	document
+		.querySelectorAll('.service_products .grid_row')
+		.forEach(serviceProductsMatchHeights)
+
+	// Service create height
+	document
+		.querySelectorAll('.service_create .grid_row')
+		.forEach(serviceCreateMatchHeights)
+
+	// Trust us height
+	document
+		.querySelectorAll('.trust_us .grid_row')
+		.forEach(trustUsMatchHeights)
+
+	// Service docs height
+	document
+		.querySelectorAll('.service_docs .grid_row')
+		.forEach(serviceDocsMatchHeights)
+
+	// Service give height
+	document
+		.querySelectorAll('.service_give .grid_row')
+		.forEach(serviceGiveMatchHeights)
+
+	// Service why height
+	document
+		.querySelectorAll('.service_why .grid_row')
+		.forEach(serviceWhyMatchHeights)
+
+	// Service needed height
+	document
+		.querySelectorAll('.service_needed .grid_row')
+		.forEach(serviceNeededMatchHeights)
+
+	// Service dangers height
+	document
+		.querySelectorAll('.service_dangers .grid_row')
+		.forEach(serviceDangersMatchHeights)
+
+	// Services height
+	document
+		.querySelectorAll('.services .grid_row')
+		.forEach(servicesMatchHeights)
+
+	// Documents height
+	document
+		.querySelectorAll('.documents .grid_row')
+		.forEach(documentsMatchHeights)
+
+	// Service signs height
+	document
+		.querySelectorAll('.service_signs .grid_row')
+		.forEach(serviceSignsMatchHeights)
+
+	// Maintenance height
+	document
+		.querySelectorAll('.maintenance .grid_row')
+		.forEach(maintenanceMatchHeights)
+
+	// Service guarantee height
+	document
+		.querySelectorAll('.service_guarantee .grid_row')
+		.forEach(serviceGuaranteeMatchHeights)
+
+	// Subscription advantages height
+	document
+		.querySelectorAll('.subscription_advantages .grid_row')
+		.forEach(subscriptionAdvantagesMatchHeights)
+
+	// Service tasks height
+	document
+		.querySelectorAll('.service_tasks .grid_row')
+		.forEach(serviceTasksMatchHeights)
+
+	// Object types height
+	document
+		.querySelectorAll('.object_types .grid_row')
+		.forEach(objectTypesMatchHeights)
+
+	// Directions height
+	document
+		.querySelectorAll('.directions .grid')
+		.forEach(directionsMatchHeights)
+
+	// Partnership height
+	document
+		.querySelectorAll('.partnership .grid_row')
+		.forEach(partnershipMatchHeights)
+
+	// Technologies height
+	document
+		.querySelectorAll('.technologies .grid_row')
+		.forEach(technologiesMatchHeights)
+
+	// Service systems height
+	document
+		.querySelectorAll('.service_systems .grid_row')
+		.forEach(serviceSystemsMatchHeights)
+
+	// Service schema height
+	document
+		.querySelectorAll('.service_schema .data .grid_row')
+		.forEach(serviceSchemaMatchHeights)
+
+	// Service typical height
+	document
+		.querySelectorAll('.service_typical .grid_row')
+		.forEach(serviceTypicalMatchHeights)
+
+	// Service object types height
+	document
+		.querySelectorAll('.service_object_types .grid_row')
+		.forEach(serviceObjectTypesMatchHeights)
+
+	// Why choose us height
+	document
+		.querySelectorAll('.why_choose_us .grid_row')
+		.forEach(whyChooseUsMatchHeights)
+
+	// For whom height
+	document
+		.querySelectorAll('.for_whom .grid_row')
+		.forEach(forWhomMatchHeights)
+
+	// Cases height
+	document
+		.querySelectorAll('.cases .grid_row')
+		.forEach(casesMatchHeights)
+
+	// Project solutions height
+	document
+		.querySelectorAll('.project_info .solution .grid_row')
+		.forEach(projectSolutionMatchHeights)
+
+	// Project solutions height
+	document
+		.querySelectorAll('.reviews .grid_row')
+		.forEach(reviewsMatchHeights)
+
+	// Why we height
+	document
+		.querySelectorAll('.why_we .grid_row')
+		.forEach(whyWeMatchHeights)
+
+	// Payment individuals height
+	document
+		.querySelectorAll('.payment_individuals .methods .grid_row')
+		.forEach(paymentIndividualsMatchHeights)
+
+	// Guarantees height
+	document
+		.querySelectorAll('.guarantees .grid_row')
+		.forEach(guaranteesMatchHeights)
 })
 
 
@@ -389,6 +611,187 @@ window.addEventListener('resize', function () {
 	if (typeof WW !== 'undefined' && WW != windowW) {
 		// Overwrite window width
 		WW = window.innerWidth || document.clientWidth || BODY.clientWidth
+
+
+		// Articles height
+		document
+			.querySelectorAll('.articles .grid_row')
+			.forEach(articlesMatchHeights)
+
+		// Service tariffs heights
+		document
+			.querySelectorAll('.service_tariffs .grid_row')
+			.forEach(serviceTariffsMatchHeights)
+
+		// Objects height
+		document
+			.querySelectorAll('.objects .grid_row')
+			.forEach(objectsMatchHeights)
+
+		// Service when height
+		document
+			.querySelectorAll('.service_when .grid_row')
+			.forEach(serviceWhenMatchHeights)
+
+		// Service modern height
+		document
+			.querySelectorAll('.service_modern .grid_row')
+			.forEach(serviceModernMatchHeights)
+
+		// Service products height
+		document
+			.querySelectorAll('.service_products .grid_row')
+			.forEach(serviceProductsMatchHeights)
+
+		// Service create height
+		document
+			.querySelectorAll('.service_create .grid_row')
+			.forEach(serviceCreateMatchHeights)
+
+		// Trust us height
+		document
+			.querySelectorAll('.trust_us .grid_row')
+			.forEach(trustUsMatchHeights)
+
+		// Service docs height
+		document
+			.querySelectorAll('.service_docs .grid_row')
+			.forEach(serviceDocsMatchHeights)
+
+		// Service give height
+		document
+			.querySelectorAll('.service_give .grid_row')
+			.forEach(serviceGiveMatchHeights)
+
+		// Service why height
+		document
+			.querySelectorAll('.service_why .grid_row')
+			.forEach(serviceWhyMatchHeights)
+
+		// Service needed height
+		document
+			.querySelectorAll('.service_needed .grid_row')
+			.forEach(serviceNeededMatchHeights)
+
+		// Service dangers height
+		document
+			.querySelectorAll('.service_dangers .grid_row')
+			.forEach(serviceDangersMatchHeights)
+
+		// Services height
+		document
+			.querySelectorAll('.services .grid_row')
+			.forEach(servicesMatchHeights)
+
+		// Documents height
+		document
+			.querySelectorAll('.documents .grid_row')
+			.forEach(documentsMatchHeights)
+
+		// Service signs height
+		document
+			.querySelectorAll('.service_signs .grid_row')
+			.forEach(serviceSignsMatchHeights)
+
+		// Maintenance height
+		document
+			.querySelectorAll('.maintenance .grid_row')
+			.forEach(maintenanceMatchHeights)
+
+		// Service guarantee height
+		document
+			.querySelectorAll('.service_guarantee .grid_row')
+			.forEach(serviceGuaranteeMatchHeights)
+
+		// Subscription advantages height
+		document
+			.querySelectorAll('.subscription_advantages .grid_row')
+			.forEach(subscriptionAdvantagesMatchHeights)
+
+		// Service tasks height
+		document
+			.querySelectorAll('.service_tasks .grid_row')
+			.forEach(serviceTasksMatchHeights)
+
+		// Object types height
+		document
+			.querySelectorAll('.object_types .grid_row')
+			.forEach(objectTypesMatchHeights)
+
+		// Directions height
+		document
+			.querySelectorAll('.directions .grid')
+			.forEach(directionsMatchHeights)
+
+		// Partnership height
+		document
+			.querySelectorAll('.partnership .grid_row')
+			.forEach(partnershipMatchHeights)
+
+		// Technologies height
+		document
+			.querySelectorAll('.technologies .grid_row')
+			.forEach(technologiesMatchHeights)
+
+		// Service systems height
+		document
+			.querySelectorAll('.service_systems .grid_row')
+			.forEach(serviceSystemsMatchHeights)
+
+		// Service schema height
+		document
+			.querySelectorAll('.service_schema .data .grid_row')
+			.forEach(serviceSchemaMatchHeights)
+
+		// Service typical height
+		document
+			.querySelectorAll('.service_typical .grid_row')
+			.forEach(serviceTypicalMatchHeights)
+
+		// Service object types height
+		document
+			.querySelectorAll('.service_object_types .grid_row')
+			.forEach(serviceObjectTypesMatchHeights)
+
+		// Why choose us height
+		document
+			.querySelectorAll('.why_choose_us .grid_row')
+			.forEach(whyChooseUsMatchHeights)
+
+		// For whom height
+		document
+			.querySelectorAll('.for_whom .grid_row')
+			.forEach(forWhomMatchHeights)
+
+		// Cases height
+		document
+			.querySelectorAll('.cases .grid_row')
+			.forEach(casesMatchHeights)
+
+		// Project solutions height
+		document
+			.querySelectorAll('.project_info .solution .grid_row')
+			.forEach(projectSolutionMatchHeights)
+
+		// Project solutions height
+		document
+			.querySelectorAll('.reviews .grid_row')
+			.forEach(reviewsMatchHeights)
+
+		// Why we height
+		document
+			.querySelectorAll('.why_we .grid_row')
+			.forEach(whyWeMatchHeights)
+
+		// Payment individuals height
+		document
+			.querySelectorAll('.payment_individuals .methods .grid_row')
+			.forEach(paymentIndividualsMatchHeights)
+
+		// Guarantees height
+		document
+			.querySelectorAll('.guarantees .grid_row')
+			.forEach(guaranteesMatchHeights)
 
 
 		// Mob. version
@@ -409,3 +812,456 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// Service tariffs heights
+function serviceTariffsMatchHeights(row) {
+	const items = [...row.querySelectorAll('.item')]
+
+	row
+		.querySelectorAll('.head .name, .head .desc, .info .desc, .info .items')
+		.forEach(el => el.style.height = 'auto')
+
+	const eq = selector =>
+		setHeight(
+			items
+				.map(item => item.querySelector(selector))
+				.filter(Boolean)
+		)
+
+	eq('.head .name')
+	eq('.head .desc')
+
+	const infoCount = Math.max(
+		...items.map(item => item.querySelectorAll('.info').length)
+	)
+
+	for (let i = 0; i < infoCount; i++) {
+		['.desc', '.items'].forEach(sel =>
+			setHeight(
+				items
+					.map(item => item.querySelectorAll('.info')[i]?.querySelector(sel))
+					.filter(Boolean)
+			)
+		)
+	}
+}
+
+
+// Articles height
+function articlesMatchHeights(row) {
+	const names = row.querySelectorAll('.article .name'),
+		descs = row.querySelectorAll('.article .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Objects height
+function objectsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service when height
+function serviceWhenMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service modern height
+function serviceModernMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service products height
+function serviceProductsMatchHeights(row) {
+	const names = row.querySelectorAll('.product .name'),
+		descs = row.querySelectorAll('.product .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service create height
+function serviceCreateMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Trust us height
+function trustUsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service docs height
+function serviceDocsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		items = row.querySelectorAll('.item .items')
+
+	;[...names, ...items].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(items)
+}
+
+
+// Service give height
+function serviceGiveMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service why height
+function serviceWhyMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service needed height
+function serviceNeededMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service dangers height
+function serviceDangersMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		items = row.querySelectorAll('.item .items')
+
+	;[...names, ...items].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(items)
+}
+
+
+// Services height
+function servicesMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Documents height
+function documentsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service signs height
+function serviceSignsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Maintenance height
+function maintenanceMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service guarantee height
+function serviceGuaranteeMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Subscription advantages height
+function subscriptionAdvantagesMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service tasks height
+function serviceTasksMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Object types height
+function objectTypesMatchHeights(row) {
+	const exps = row.querySelectorAll('.type .exp'),
+		names = row.querySelectorAll('.type .name')
+
+	;[...exps, ...names].forEach(el => el.style.height = 'auto')
+
+	setHeight(exps)
+	setHeight(names)
+}
+
+
+// Directions height
+function directionsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name')
+
+	;[...names].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+}
+
+
+// Partnership height
+function partnershipMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		options = row.querySelectorAll('.item .options')
+
+	;[...names, ...options].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(options)
+}
+
+
+// Technologies height
+function technologiesMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service systems height
+function serviceSystemsMatchHeights(row) {
+	const descs = row.querySelectorAll('.item .desc'),
+		pluses = row.querySelectorAll('.item .pluses'),
+		brand = row.querySelectorAll('.item .text_info')
+
+	;[...descs, ...pluses, ...brand].forEach(el => el.style.height = 'auto')
+
+	setHeight(descs)
+	setHeight(pluses)
+	setHeight(brand)
+}
+
+
+// Service schema height
+function serviceSchemaMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service typical height
+function serviceTypicalMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Service object types height
+function serviceObjectTypesMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Why choose us height
+function whyChooseUsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// For whom height
+function forWhomMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Cases height
+function casesMatchHeights(row) {
+	const names = row.querySelectorAll('.case .name'),
+		descs = row.querySelectorAll('.case .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Project solutions height
+function projectSolutionMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name')
+
+	;[...names].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+}
+
+
+// Reviews height
+function reviewsMatchHeights(row) {
+	const descs = row.querySelectorAll('.review .desc'),
+		authors = row.querySelectorAll('.review .author')
+
+	;[...descs, ...authors].forEach(el => el.style.height = 'auto')
+
+	setHeight(descs)
+	setHeight(authors)
+}
+
+
+// Why we height
+function whyWeMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Payment individuals height
+function paymentIndividualsMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
+
+
+// Guarantees height
+function guaranteesMatchHeights(row) {
+	const names = row.querySelectorAll('.item .name'),
+		descs = row.querySelectorAll('.item .desc')
+
+	;[...names, ...descs].forEach(el => el.style.height = 'auto')
+
+	setHeight(names)
+	setHeight(descs)
+}
