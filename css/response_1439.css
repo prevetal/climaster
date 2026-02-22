@@ -2433,4 +2433,28 @@
         width: auto;
         max-width: 200px;
     }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: 48px;
+
+        --modal_width: 620px;
+    }
+
+
+    .modal_desc
+    {
+        margin-top: calc(var(--inner_gap_xs) * -1);
+    }
+
+
+    .modal .close_btn
+    {
+        height: 68px;
+    }
 }

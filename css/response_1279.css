@@ -2912,4 +2912,24 @@
         width: calc(50% - var(--inner_gap));
         margin-top: var(--cont_padding_double);
     }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal .close_btn
+    {
+        height: 60px;
+    }
+
+
+
+    /*---------------------------
+        PopUp - Request offer
+    ---------------------------*/
+    #request_offer_modal
+    {
+        --modal_width: 975px;
+    }
 }

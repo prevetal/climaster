@@ -1660,4 +1660,16 @@
     {
         width: 100%;
     }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: var(--block_padding);
+
+        --modal_width: 560px;
+    }
 }

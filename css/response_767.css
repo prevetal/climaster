@@ -6,7 +6,7 @@
     :root
     {
         --cont_padding: 20px;
-        --font_size_title_l: 33px;
+        --font_size_title_l: 25px;
         --font_size_title: 25px;
         --font_size_title_s: 22px;
         --font_size_title_xs: 19px;
@@ -16,6 +16,17 @@
         --border_radius_l: 32px;
         --border_radius: 24px;
         --border_radius_m: 20px;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .f-button.is-close-button
+    {
+        top: var(--inner_gap_xs);
+        right: var(--inner_gap_xs);
     }
 
 
@@ -146,9 +157,16 @@
 
 
     .form .columns > *,
+    .form .columns > *.width2of3,
     .form .columns > *.width1of3
     {
         width: calc(100% - var(--form_columns_gap));
+    }
+
+
+    .form .dropzone
+    {
+        height: 140px;
     }
 
 
@@ -233,6 +251,12 @@
     {
         width: 100%;
         padding-block: var(--inner_gap_xl);
+    }
+
+
+    .about_info .row .data .title br
+    {
+        display: none;
     }
 
 
@@ -2246,5 +2270,29 @@
         width: 100%;
 
         text-align: center;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding-inline: var(--inner_gap);
+
+        --modal_width: 560px;
+    }
+
+
+    .modal_title br
+    {
+        display: none !important;
+    }
+
+
+    .modal .form
+    {
+        --form_textarea_height: 212px;
     }
 }

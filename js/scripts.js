@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			slidesPerView: 1,
-			lazy: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -98,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 			on: {
 				init: swiper => {
-					setTimeout(() => setHeight(swiper.el.querySelectorAll('.swiper-slide')), 500)
-
 					swiper.slideTo(2, 0)
 					setTimeout(() => swiper.slideTo(0, 0), 50)
+
+					setTimeout(() => setHeight(swiper.el.querySelectorAll('.swiper-slide')), 500)
 				}
 			}
 		})
@@ -205,11 +204,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		Fancybox.show(
 			[{
-				src: document.getElementById(e.target.getAttribute('data-modal')),
+				src: `#${e.target.getAttribute('data-modal')}`,
 				type: 'inline'
 			}],
 			fancyOptions
 		)
+	})
+
+
+	$('.modal .close_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
 	})
 
 
@@ -222,6 +228,22 @@ document.addEventListener('DOMContentLoaded', function() {
 		Thumbs: {
 			autoStart: false
 		}
+	})
+
+
+	// Custom submit
+	$('.form').submit(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show(
+			[{
+				src: '#success_modal',
+				type: 'inline'
+			}],
+			fancyOptions
+		)
 	})
 
 
@@ -275,17 +297,30 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
-	$('.mob_menu .services_menu > * > a.sub_link, .mob_menu .solutions_menu .items > * > a.sub_link').click(function(e) {
+	$('.mob_menu .services_menu > * > a.sub_link').click(function(e) {
 		e.preventDefault()
 
 		$(this).next('.sub').addClass('show')
 	})
 
 
-	$('.mob_menu .services_menu .back_btn, .mob_menu .solutions_menu .back_btn').click(function(e) {
+	$('.mob_menu .services_menu .back_btn').click(function(e) {
 		e.preventDefault()
 
 		$(this).closest('.sub').removeClass('show')
+	})
+
+
+	$('.mob_menu .solutions_menu .grid_row a.sub_link').click(function(e) {
+		e.preventDefault()
+
+		const index = $(this).parent().index() + 1
+
+		$('.mob_menu .solutions_menu .grid_row a.sub_link').removeClass('active')
+		$(this).addClass('active')
+
+		$('.mob_menu .solutions_menu .sub').hide()
+		$('.mob_menu .solutions_menu .sub' + index).fadeIn(300)
 	})
 
 
@@ -303,12 +338,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Select file
-	const fileInputs = document.querySelectorAll('form input[type=file]')
+	const fileInputs = document.querySelectorAll('form .file input[type=file]')
 
 	if (fileInputs) {
 		fileInputs.forEach(el => {
 			el.addEventListener('change', () => el.closest('.file').querySelector('label span').innerText = el.value)
 		})
+	}
+
+
+	// Select file - dropzone
+	const dropzone = $('#dropzone'),
+		input = dropzone.find('input'),
+		selected = dropzone.find('span')
+
+	let files = []
+
+	input.on('change', function () {
+		addFiles(this.files)
+
+		this.value = ''
+	})
+
+	dropzone.on('dragover', function (e) {
+		e.preventDefault()
+
+		$(this).addClass('dragover')
+	})
+
+	dropzone.on('dragleave', function () {
+		$(this).removeClass('dragover')
+	})
+
+	dropzone.on('drop', function (e) {
+		e.preventDefault()
+
+		$(this).removeClass('dragover')
+
+		const droppedFiles = e.originalEvent.dataTransfer.files
+
+		addFiles(droppedFiles)
+	})
+
+	function addFiles(newFiles) {
+		$.each(newFiles, function (_, file) {
+			files.push(file)
+		})
+
+		renderList()
+	}
+
+	function renderList() {
+		const names = files.map(file => file.name)
+
+		selected.text(names.join(', '))
 	}
 
 
